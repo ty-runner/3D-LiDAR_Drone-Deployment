@@ -2,7 +2,7 @@ import json
 import time
 import serial
 
-PORT = "/dev/cu.usbserial-1110"
+PORT = "/dev/ttyTHS1"
 BAUD = 115200
 # source venv/bin/activate
 
