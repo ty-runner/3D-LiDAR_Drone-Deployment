@@ -1,37 +1,35 @@
-import serial
-import time
+import serial, time, json
 
-ser = serial.Serial("/dev/ttyTHS1", 115200, timeout=0.1)
+PORT = "/dev/ttyTHS1"
+BAUD = 115200
 
-def move_servo(servo_id, position, time_ms=500):
-    position = max(0, min(1000, position))
-    time_ms = max(0, min(30000, time_ms))
+ser = serial.Serial(PORT, BAUD, timeout=0.3)
 
-    params = [
-        servo_id,
-        7,              # length
-        0x01,           # move command
-        position & 0xFF,
-        (position >> 8) & 0xFF,
-        time_ms & 0xFF,
-        (time_ms >> 8) & 0xFF
-    ]
+def send(cmd):
+    # Many Waveshare ESP32 firmwares expect CRLF
+    line = json.dumps(cmd) + "\r\n"
+    ser.write(line.encode("utf-8"))
+    ser.flush()
+    time.sleep(0.08)
+    resp = ser.read(300)
+    if resp:
+        try:
+            print("RX:", resp.decode("utf-8", errors="replace"))
+        except Exception:
+            print("RX (bytes):", resp)
 
-    checksum = (~sum(params)) & 0xFF
-    packet = bytes([0x55, 0x55] + params + [checksum])
+# --- ID setting (ONLY PAN SERVO CONNECTED for this!) ---
+send({"T":501, "raw":1, "new":2})
 
-    ser.write(packet)
+# --- torque off so you can hand-center ---
+send({"T":210, "cmd":0})
 
-# Center position
-move_servo(1, 500)
-time.sleep(1)
+# After you manually align camera straight forward/level:
+send({"T":502, "id":1})  # tilt
+send({"T":502, "id":2})  # pan
 
-# Move left
-move_servo(1, 200)
-time.sleep(1)
-
-# Move right
-move_servo(1, 800)
+# Go to center to verify
+send({"T":133, "X":0, "Y":0, "SPD":0, "ACC":0})
 
 ser.close()
 
