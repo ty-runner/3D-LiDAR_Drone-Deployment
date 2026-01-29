@@ -22,7 +22,7 @@ void angle_transform(float* pan_tilt_angles, float* drone_position, float* objec
 int main(){
 
     float drone_position[] = {0.0f, 0.0f, 0.0f}; //in meters
-    float object_position[] = {1.0f, 1.0f, 1.0f}; //in meters
+    float object_position[] = {-1.0f, 1.0f, 1.0f}; //in meters
     angle_transform(nullptr, drone_position, object_position);
 
     return 0;
