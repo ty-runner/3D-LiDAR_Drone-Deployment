@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <cmath>
 
+constexpr float PI = 3.14159265358979323846f;
+
 class TargetTrackerNode : public rclcpp::Node
 {
 public:
@@ -111,6 +113,16 @@ void TargetTrackerNode::angle_transform(float* pan_tilt_angles, float* drone_pos
     float xd_ = object_position[0] - drone_position[0]; // diff in x
     float yd_ = object_position[1] - drone_position[1]; // diff in y
     float zd_ = object_position[2] - drone_position[2]; // diff in z
+
+    float horizontal_angle = atan2(yd_, xd_) * (180 / PI); //degrees
+
+    std::cout << "THETA: " << horizontal_angle << std::endl;
+    
+    float magnitude = std::sqrt(xd_ * xd_ + yd_ * yd_ + zd_ * zd_);
+
+    float vertical_angle = std::clamp(asin(zd_ / magnitude) * (180 / PI), -45.0f, 135.0f);
+
+    std::cout << "PHI: " << vertical_angle << std::endl;
 }
 
 int main(int argc, char **argv)
