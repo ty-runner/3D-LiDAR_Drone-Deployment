@@ -6,7 +6,7 @@ class ScanSequenceNode : public rclcpp::Node
 {
 public:
   ScanSequenceNode()
-  : Node("scan_sequence_node"), pan_angle_(0.0), tilt_angle_(150.0),
+  : Node("scan_sequence_node"), pan_angle_(0.0), tilt_angle_(0.0),
     pan_increment_(0.75), pan_direction_(1)
   {
     publisher_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("/servo_angles", 10);
@@ -25,13 +25,13 @@ private:
 
   pan_angle_ += pan_increment_ * pan_direction_;
 
-  if (pan_angle_ >= 180.0 || pan_angle_ <= 0.0) {
+  if (pan_angle_ >= 90.0 || pan_angle_ <= -90.0) {
     pan_direction_ *= -1;
-    pan_angle_ = std::max(std::min(pan_angle_, 180.0), 0.0);
-    tilt_angle_ += 5.0; // Increment tilt by 5 degrees each sweep
+    pan_angle_ = std::max(std::min(pan_angle_, 90.0), -90.0);
+    tilt_angle_ += 10.0; // Increment tilt by 5 degrees each sweep
 
-    if (tilt_angle_ > 180.0) { // Set the upper limit as 200 degrees
-      tilt_angle_ = 125.0; // Reset to lower limit was 105
+    if (tilt_angle_ > 90.0) { // Set the upper limit as 200 degrees
+      tilt_angle_ = -45.0; // Reset to lower limit was 105
     }
     RCLCPP_INFO(this->get_logger(), "Pan reversed at %.2f°, Tilt updated to %.2f°", pan_angle_, tilt_angle_);
     }
