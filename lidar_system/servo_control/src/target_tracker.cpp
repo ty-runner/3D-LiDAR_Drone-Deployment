@@ -17,7 +17,7 @@ private:
         const geometry_msgs::msg::PoseStamped::SharedPtr msg);
 
     void detected_object_callback(
-        const geometry_msgs::msg::PoseStamped::SharedPtr msg);
+        const geometry_msgs::msg::PoseArray::SharedPtr msg);
 
     void angle_transform(float* pan_tilt_angles, float* drone_position, float* object_position);
 
@@ -25,7 +25,7 @@ private:
 
     // Subscribers
     rclcpp::Subscription<geometry_msgs::msg::PoseStamped::SharedPtr> local_pos_sub_;
-    rclcpp::Subscription<geometry_msgs::msg::PoseStamped::SharedPtr> detected_obj_sub_;
+    rclcpp::Subscription<geometry_msgs::msg::PoseArray::SharedPtr> detected_obj_sub_;
 
     // Publisher
     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr publisher_;
@@ -73,8 +73,8 @@ TargetTrackerNode::TargetTrackerNode() // constructor
         std::bind(&TargetTrackerNode::local_position_callback, this, std::placeholders::_1));
 
     // Subscriber: detected object position
-    detected_obj_sub_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
-        "/object_detection", rclcpp::SensorDataQoS(),
+    detected_obj_sub_ = this->create_subscription<geometry_msgs::msg::PoseArray>(
+        "/lidar_detections_centroids", rclcpp::SensorDataQoS(),
         std::bind(&TargetTrackerNode::detected_object_callback, this, std::placeholders::_1));
 
     timer_ = this->create_wall_timer(
@@ -95,11 +95,12 @@ void TargetTrackerNode::local_position_callback(const geometry_msgs::msg::PoseSt
         "Local pos: x=%.2f y=%.2f z=%.2f", px_, py_, pz_);
 }
 
-void TargetTrackerNode::detected_object_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg)
+void TargetTrackerNode::detected_object_callback(const geometry_msgs::msg::PoseArray::SharedPtr msg)
 {
-    ox_ = msg->pose.position.x;
-    oy_ = msg->pose.position.y;
-    oz_ = msg->pose.position.z;
+    //msg->poses is an array full of poses of all detected objects, for now lets just do the first one
+    ox_ = msg->poses[0].position.x;
+    oy_ = msg->poses[0].position.y;
+    oz_ = msg->poses[0].position.z;
 
     last_stamp_ = msg->header.stamp;
 
