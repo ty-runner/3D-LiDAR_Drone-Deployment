@@ -1,0 +1,11 @@
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp: In member function ‘void ScanSequenceNode::timer_callback()’:
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:31:16: error: expected ‘;’ before numeric constant
+   31 |     tilt_angle_ 90.0;//+= 10.0; // Increment tilt by 5 degrees each sweep
+      |                ^~~~~
+      |                ;
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:31:5: warning: statement has no effect [-Wunused-value]
+   31 |     tilt_angle_ 90.0;//+= 10.0; // Increment tilt by 5 degrees each sweep
+      |     ^~~~~~~~~~~
+make[2]: *** [CMakeFiles/scan_sequence_node.dir/build.make:63: CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:82: CMakeFiles/scan_sequence_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

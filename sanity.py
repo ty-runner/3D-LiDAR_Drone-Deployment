@@ -1,6 +1,6 @@
 import serial, time, json
 
-PORT = "/dev/ttyUSB0"    # <-- if using header UART
+PORT = "/dev/ttyTHS1"    # <-- if using header UART
 BAUD = 115200
 
 ser = serial.Serial(PORT, BAUD, timeout=0.3, xonxoff=False, rtscts=False, dsrdtr=False)

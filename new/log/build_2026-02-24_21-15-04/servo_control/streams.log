@@ -1,0 +1,13 @@
+[0.058s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[0.331s] Scanning dependencies of target scan_sequence_node
+[0.406s] [ 33%] Built target dynamic_tf_broadcaster
+[0.408s] [ 50%] Building CXX object CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o
+[0.433s] [ 83%] Built target lidar_pointcloud_node
+[6.828s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp: In member function ‘void ScanSequenceNode::advance_angles()’:
+[6.828s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:105:20: error: ‘tilt_increment_’ was not declared in this scope
+[6.829s]   105 |     tilt_angle_ += tilt_increment_;
+[6.829s]       |                    ^~~~~~~~~~~~~~~
+[14.487s] make[2]: *** [CMakeFiles/scan_sequence_node.dir/build.make:63: CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o] Error 1
+[14.487s] make[1]: *** [CMakeFiles/Makefile2:82: CMakeFiles/scan_sequence_node.dir/all] Error 2
+[14.487s] make: *** [Makefile:141: all] Error 2
+[14.493s] Invoked command in '/root/lidar_system/build/servo_control' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4

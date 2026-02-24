@@ -1,0 +1,16 @@
+[0.056s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[0.384s] [ 16%] Building CXX object CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o
+[0.398s] [ 50%] Built target dynamic_tf_broadcaster
+[0.472s] [ 83%] Built target lidar_pointcloud_node
+[6.043s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp: In member function ‘void ScanSequenceNode::timer_callback()’:
+[6.044s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:31:16: error: expected ‘;’ before numeric constant
+[6.044s]    31 |     tilt_angle_ 90.0;//+= 10.0; // Increment tilt by 5 degrees each sweep
+[6.045s]       |                ^~~~~
+[6.045s]       |                ;
+[6.045s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:31:5: warning: statement has no effect [-Wunused-value]
+[6.046s]    31 |     tilt_angle_ 90.0;//+= 10.0; // Increment tilt by 5 degrees each sweep
+[6.046s]       |     ^~~~~~~~~~~
+[9.788s] make[2]: *** [CMakeFiles/scan_sequence_node.dir/build.make:63: CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o] Error 1
+[9.789s] make[1]: *** [CMakeFiles/Makefile2:82: CMakeFiles/scan_sequence_node.dir/all] Error 2
+[9.789s] make: *** [Makefile:141: all] Error 2
+[9.794s] Invoked command in '/root/lidar_system/build/servo_control' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4

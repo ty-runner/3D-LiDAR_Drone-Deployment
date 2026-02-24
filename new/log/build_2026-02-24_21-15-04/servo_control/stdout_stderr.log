@@ -1,0 +1,11 @@
+Scanning dependencies of target scan_sequence_node
+[ 33%] Built target dynamic_tf_broadcaster
+[ 50%] Building CXX object CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o
+[ 83%] Built target lidar_pointcloud_node
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp: In member function ‘void ScanSequenceNode::advance_angles()’:
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:105:20: error: ‘tilt_increment_’ was not declared in this scope
+  105 |     tilt_angle_ += tilt_increment_;
+      |                    ^~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/scan_sequence_node.dir/build.make:63: CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:82: CMakeFiles/scan_sequence_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
