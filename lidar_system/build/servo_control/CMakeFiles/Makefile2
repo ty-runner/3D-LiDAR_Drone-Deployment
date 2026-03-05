@@ -53,9 +53,11 @@ CMAKE_BINARY_DIR = /root/lidar_system/build/servo_control
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/scan_sequence_node.dir/all
-all: CMakeFiles/lidar_pointcloud_node.dir/all
 all: CMakeFiles/dynamic_tf_broadcaster.dir/all
+all: CMakeFiles/target_tracker_node.dir/all
+all: CMakeFiles/lidar_pointcloud_node.dir/all
+all: CMakeFiles/mavros_tf_node.dir/all
+all: CMakeFiles/scan_sequence_node.dir/all
 
 .PHONY : all
 
@@ -65,94 +67,15 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/scan_sequence_node.dir/clean
-clean: CMakeFiles/lidar_pointcloud_node.dir/clean
-clean: CMakeFiles/dynamic_tf_broadcaster.dir/clean
 clean: CMakeFiles/servo_control_uninstall.dir/clean
 clean: CMakeFiles/uninstall.dir/clean
+clean: CMakeFiles/dynamic_tf_broadcaster.dir/clean
+clean: CMakeFiles/target_tracker_node.dir/clean
+clean: CMakeFiles/lidar_pointcloud_node.dir/clean
+clean: CMakeFiles/mavros_tf_node.dir/clean
+clean: CMakeFiles/scan_sequence_node.dir/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/scan_sequence_node.dir
-
-# All Build rule for target.
-CMakeFiles/scan_sequence_node.dir/all:
-	$(MAKE) -f CMakeFiles/scan_sequence_node.dir/build.make CMakeFiles/scan_sequence_node.dir/depend
-	$(MAKE) -f CMakeFiles/scan_sequence_node.dir/build.make CMakeFiles/scan_sequence_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/lidar_system/build/servo_control/CMakeFiles --progress-num=5,6 "Built target scan_sequence_node"
-.PHONY : CMakeFiles/scan_sequence_node.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/scan_sequence_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/scan_sequence_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 0
-.PHONY : CMakeFiles/scan_sequence_node.dir/rule
-
-# Convenience name for target.
-scan_sequence_node: CMakeFiles/scan_sequence_node.dir/rule
-
-.PHONY : scan_sequence_node
-
-# clean rule for target.
-CMakeFiles/scan_sequence_node.dir/clean:
-	$(MAKE) -f CMakeFiles/scan_sequence_node.dir/build.make CMakeFiles/scan_sequence_node.dir/clean
-.PHONY : CMakeFiles/scan_sequence_node.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/lidar_pointcloud_node.dir
-
-# All Build rule for target.
-CMakeFiles/lidar_pointcloud_node.dir/all:
-	$(MAKE) -f CMakeFiles/lidar_pointcloud_node.dir/build.make CMakeFiles/lidar_pointcloud_node.dir/depend
-	$(MAKE) -f CMakeFiles/lidar_pointcloud_node.dir/build.make CMakeFiles/lidar_pointcloud_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/lidar_system/build/servo_control/CMakeFiles --progress-num=3,4 "Built target lidar_pointcloud_node"
-.PHONY : CMakeFiles/lidar_pointcloud_node.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/lidar_pointcloud_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lidar_pointcloud_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 0
-.PHONY : CMakeFiles/lidar_pointcloud_node.dir/rule
-
-# Convenience name for target.
-lidar_pointcloud_node: CMakeFiles/lidar_pointcloud_node.dir/rule
-
-.PHONY : lidar_pointcloud_node
-
-# clean rule for target.
-CMakeFiles/lidar_pointcloud_node.dir/clean:
-	$(MAKE) -f CMakeFiles/lidar_pointcloud_node.dir/build.make CMakeFiles/lidar_pointcloud_node.dir/clean
-.PHONY : CMakeFiles/lidar_pointcloud_node.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/dynamic_tf_broadcaster.dir
-
-# All Build rule for target.
-CMakeFiles/dynamic_tf_broadcaster.dir/all:
-	$(MAKE) -f CMakeFiles/dynamic_tf_broadcaster.dir/build.make CMakeFiles/dynamic_tf_broadcaster.dir/depend
-	$(MAKE) -f CMakeFiles/dynamic_tf_broadcaster.dir/build.make CMakeFiles/dynamic_tf_broadcaster.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/lidar_system/build/servo_control/CMakeFiles --progress-num=1,2 "Built target dynamic_tf_broadcaster"
-.PHONY : CMakeFiles/dynamic_tf_broadcaster.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/dynamic_tf_broadcaster.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dynamic_tf_broadcaster.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 0
-.PHONY : CMakeFiles/dynamic_tf_broadcaster.dir/rule
-
-# Convenience name for target.
-dynamic_tf_broadcaster: CMakeFiles/dynamic_tf_broadcaster.dir/rule
-
-.PHONY : dynamic_tf_broadcaster
-
-# clean rule for target.
-CMakeFiles/dynamic_tf_broadcaster.dir/clean:
-	$(MAKE) -f CMakeFiles/dynamic_tf_broadcaster.dir/build.make CMakeFiles/dynamic_tf_broadcaster.dir/clean
-.PHONY : CMakeFiles/dynamic_tf_broadcaster.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/servo_control_uninstall.dir
@@ -207,6 +130,141 @@ uninstall: CMakeFiles/uninstall.dir/rule
 CMakeFiles/uninstall.dir/clean:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/clean
 .PHONY : CMakeFiles/uninstall.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/dynamic_tf_broadcaster.dir
+
+# All Build rule for target.
+CMakeFiles/dynamic_tf_broadcaster.dir/all:
+	$(MAKE) -f CMakeFiles/dynamic_tf_broadcaster.dir/build.make CMakeFiles/dynamic_tf_broadcaster.dir/depend
+	$(MAKE) -f CMakeFiles/dynamic_tf_broadcaster.dir/build.make CMakeFiles/dynamic_tf_broadcaster.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/lidar_system/build/servo_control/CMakeFiles --progress-num=1,2 "Built target dynamic_tf_broadcaster"
+.PHONY : CMakeFiles/dynamic_tf_broadcaster.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/dynamic_tf_broadcaster.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dynamic_tf_broadcaster.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 0
+.PHONY : CMakeFiles/dynamic_tf_broadcaster.dir/rule
+
+# Convenience name for target.
+dynamic_tf_broadcaster: CMakeFiles/dynamic_tf_broadcaster.dir/rule
+
+.PHONY : dynamic_tf_broadcaster
+
+# clean rule for target.
+CMakeFiles/dynamic_tf_broadcaster.dir/clean:
+	$(MAKE) -f CMakeFiles/dynamic_tf_broadcaster.dir/build.make CMakeFiles/dynamic_tf_broadcaster.dir/clean
+.PHONY : CMakeFiles/dynamic_tf_broadcaster.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/target_tracker_node.dir
+
+# All Build rule for target.
+CMakeFiles/target_tracker_node.dir/all:
+	$(MAKE) -f CMakeFiles/target_tracker_node.dir/build.make CMakeFiles/target_tracker_node.dir/depend
+	$(MAKE) -f CMakeFiles/target_tracker_node.dir/build.make CMakeFiles/target_tracker_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/lidar_system/build/servo_control/CMakeFiles --progress-num=9,10 "Built target target_tracker_node"
+.PHONY : CMakeFiles/target_tracker_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/target_tracker_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/target_tracker_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 0
+.PHONY : CMakeFiles/target_tracker_node.dir/rule
+
+# Convenience name for target.
+target_tracker_node: CMakeFiles/target_tracker_node.dir/rule
+
+.PHONY : target_tracker_node
+
+# clean rule for target.
+CMakeFiles/target_tracker_node.dir/clean:
+	$(MAKE) -f CMakeFiles/target_tracker_node.dir/build.make CMakeFiles/target_tracker_node.dir/clean
+.PHONY : CMakeFiles/target_tracker_node.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/lidar_pointcloud_node.dir
+
+# All Build rule for target.
+CMakeFiles/lidar_pointcloud_node.dir/all:
+	$(MAKE) -f CMakeFiles/lidar_pointcloud_node.dir/build.make CMakeFiles/lidar_pointcloud_node.dir/depend
+	$(MAKE) -f CMakeFiles/lidar_pointcloud_node.dir/build.make CMakeFiles/lidar_pointcloud_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/lidar_system/build/servo_control/CMakeFiles --progress-num=3,4 "Built target lidar_pointcloud_node"
+.PHONY : CMakeFiles/lidar_pointcloud_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lidar_pointcloud_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lidar_pointcloud_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 0
+.PHONY : CMakeFiles/lidar_pointcloud_node.dir/rule
+
+# Convenience name for target.
+lidar_pointcloud_node: CMakeFiles/lidar_pointcloud_node.dir/rule
+
+.PHONY : lidar_pointcloud_node
+
+# clean rule for target.
+CMakeFiles/lidar_pointcloud_node.dir/clean:
+	$(MAKE) -f CMakeFiles/lidar_pointcloud_node.dir/build.make CMakeFiles/lidar_pointcloud_node.dir/clean
+.PHONY : CMakeFiles/lidar_pointcloud_node.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/mavros_tf_node.dir
+
+# All Build rule for target.
+CMakeFiles/mavros_tf_node.dir/all:
+	$(MAKE) -f CMakeFiles/mavros_tf_node.dir/build.make CMakeFiles/mavros_tf_node.dir/depend
+	$(MAKE) -f CMakeFiles/mavros_tf_node.dir/build.make CMakeFiles/mavros_tf_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/lidar_system/build/servo_control/CMakeFiles --progress-num=5,6 "Built target mavros_tf_node"
+.PHONY : CMakeFiles/mavros_tf_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/mavros_tf_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mavros_tf_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 0
+.PHONY : CMakeFiles/mavros_tf_node.dir/rule
+
+# Convenience name for target.
+mavros_tf_node: CMakeFiles/mavros_tf_node.dir/rule
+
+.PHONY : mavros_tf_node
+
+# clean rule for target.
+CMakeFiles/mavros_tf_node.dir/clean:
+	$(MAKE) -f CMakeFiles/mavros_tf_node.dir/build.make CMakeFiles/mavros_tf_node.dir/clean
+.PHONY : CMakeFiles/mavros_tf_node.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/scan_sequence_node.dir
+
+# All Build rule for target.
+CMakeFiles/scan_sequence_node.dir/all:
+	$(MAKE) -f CMakeFiles/scan_sequence_node.dir/build.make CMakeFiles/scan_sequence_node.dir/depend
+	$(MAKE) -f CMakeFiles/scan_sequence_node.dir/build.make CMakeFiles/scan_sequence_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/lidar_system/build/servo_control/CMakeFiles --progress-num=7,8 "Built target scan_sequence_node"
+.PHONY : CMakeFiles/scan_sequence_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/scan_sequence_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/scan_sequence_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/lidar_system/build/servo_control/CMakeFiles 0
+.PHONY : CMakeFiles/scan_sequence_node.dir/rule
+
+# Convenience name for target.
+scan_sequence_node: CMakeFiles/scan_sequence_node.dir/rule
+
+.PHONY : scan_sequence_node
+
+# clean rule for target.
+CMakeFiles/scan_sequence_node.dir/clean:
+	$(MAKE) -f CMakeFiles/scan_sequence_node.dir/build.make CMakeFiles/scan_sequence_node.dir/clean
+.PHONY : CMakeFiles/scan_sequence_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

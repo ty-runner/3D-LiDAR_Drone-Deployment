@@ -1,0 +1,32 @@
+[0.068s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[0.510s] [ 20%] Built target lidar_pointcloud_node
+[0.522s] [ 40%] Built target target_tracker_node
+[0.537s] [ 60%] Built target dynamic_tf_broadcaster
+[0.544s] [ 80%] Built target mavros_tf_node
+[0.631s] Scanning dependencies of target scan_sequence_node
+[0.694s] [ 90%] Building CXX object CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o
+[6.454s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:233:56: error: expected unqualified-id before numeric constant
+[6.455s]   233 |   rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr 2d_detected_sub_;
+[6.456s]       |                                                        ^~~~~~~~~~~~~~~~
+[6.456s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:234:56: error: expected unqualified-id before numeric constant
+[6.456s]   234 |   rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr 3d_detected_sub_;
+[6.457s]       |                                                        ^~~~~~~~~~~~~~~~
+[6.604s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp: In constructor ‘ScanSequenceNode::ScanSequenceNode()’:
+[6.605s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:52:5: error: unable to find numeric literal operator ‘operator""d_detected_sub_’
+[6.605s]    52 |     2d_detected_sub_ = this->create_subscription<std_msgs::msg::Bool>(
+[6.606s]       |     ^~~~~~~~~~~~~~~~
+[6.629s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:56:5: error: unable to find numeric literal operator ‘operator""d_detected_sub_’
+[6.629s]    56 |     3d_detected_sub_ = this->create_subscription<std_msgs::msg::Bool>(
+[6.630s]       |     ^~~~~~~~~~~~~~~~
+[6.630s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:58:36: error: expected unqualified-id before numeric constant
+[6.631s]    58 |       std::bind(&ScanSequenceNode::3d_detected_callback, this, std::placeholders::_1));
+[6.631s]       |                                    ^~~~~~~~~~~~~~~~~~~~
+[6.729s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp: In member function ‘void ScanSequenceNode::detected_callback(std_msgs::msg::Bool_<std::allocator<void> >::SharedPtr)’:
+[6.730s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:176:28: error: ‘target_detected’ was not declared in this scope; did you mean ‘target_detected_’?
+[6.730s]   176 |     last_detection_state = target_detected;
+[6.730s]       |                            ^~~~~~~~~~~~~~~
+[6.731s]       |                            target_detected_
+[18.238s] make[2]: *** [CMakeFiles/scan_sequence_node.dir/build.make:63: CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o] Error 1
+[18.239s] make[1]: *** [CMakeFiles/Makefile2:248: CMakeFiles/scan_sequence_node.dir/all] Error 2
+[18.239s] make: *** [Makefile:141: all] Error 2
+[18.245s] Invoked command in '/root/lidar_system/build/servo_control' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4

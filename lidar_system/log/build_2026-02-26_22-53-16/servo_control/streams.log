@@ -1,0 +1,15 @@
+[0.109s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[0.575s] [ 20%] Built target dynamic_tf_broadcaster
+[0.691s] Scanning dependencies of target mavros_tf_node
+[0.758s] [ 30%] Building CXX object CMakeFiles/mavros_tf_node.dir/src/mavros_tf_node.cpp.o
+[7.136s] /root/lidar_system/servo_control/src/mavros_tf_node.cpp: In member function ‘void MavrosTFNode::pose_callback(geometry_msgs::msg::PoseStamped_<std::allocator<void> >::SharedPtr)’:
+[7.136s] /root/lidar_system/servo_control/src/mavros_tf_node.cpp:37:52: error: expected unqualified-id before ‘-’ token
+[7.137s]    37 |     t.transform.translation.z = msg->pose.position.-z;
+[7.137s]       |                                                    ^
+[7.142s] /root/lidar_system/servo_control/src/mavros_tf_node.cpp:37:53: error: ‘z’ was not declared in this scope
+[7.143s]    37 |     t.transform.translation.z = msg->pose.position.-z;
+[7.143s]       |                                                     ^
+[13.798s] make[2]: *** [CMakeFiles/mavros_tf_node.dir/build.make:63: CMakeFiles/mavros_tf_node.dir/src/mavros_tf_node.cpp.o] Error 1
+[13.800s] make[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/mavros_tf_node.dir/all] Error 2
+[13.801s] make: *** [Makefile:141: all] Error 2
+[13.805s] Invoked command in '/root/lidar_system/build/servo_control' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4

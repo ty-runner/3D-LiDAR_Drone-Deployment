@@ -54,9 +54,24 @@ add_executable(scan_sequence_node src/scan_sequence_node.cpp)
 ament_target_dependencies(scan_sequence_node
   rclcpp
   std_msgs
- 
+  sensor_msgs
 )
 
+#Tracker Node
+add_executable(target_tracker_node src/target_tracker_node.cpp)
+ament_target_dependencies(target_tracker_node
+  rclcpp
+  sensor_msgs
+  std_msgs
+  visualization_msgs
+)
+
+add_executable(mavros_tf_node src/mavros_tf_node.cpp)
+ament_target_dependencies(mavros_tf_node
+  rclcpp
+  geometry_msgs
+  tf2_ros
+)
 
 
 # Install executables
@@ -64,6 +79,8 @@ install(TARGETS
   dynamic_tf_broadcaster
   lidar_pointcloud_node
   scan_sequence_node
+  target_tracker_node
+  mavros_tf_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

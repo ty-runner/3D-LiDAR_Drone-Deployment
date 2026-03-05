@@ -23,6 +23,12 @@ def generate_launch_description():
             executable='servo_motor_node.py',
             name='servo_motor_node'
         ),
+
+        Node(
+            package='servo_control',
+            executable='lidar_bbox_open3d.py',
+            name='lidar_bbox_open3d'
+        ),
         Node(
             package='servo_control',
             executable='dynamic_tf_broadcaster',
@@ -35,19 +41,30 @@ def generate_launch_description():
                 {'offset_z': 0.0}
             ]
         ),
+
         Node(
             package='servo_control',
             executable='lidar_pointcloud_node',
             name='lidar_pointcloud_node'
         ),
+
         Node(
-            package='tf2_ros',
-            executable='static_transform_publisher',
-            name='fcu_to_base_link',
-            arguments=['0', '0', '0', '0', '0', '0', 'fcu', 'base_link'],
+            package='servo_control',
+            executable='mavros_tf_node',
+            name='mavros_tf_node'
+	    ),
+
+        Node(
+            package='servo_control',
+            executable='target_tracker_node',
+            name='target_tracker_node',
+            parameters=[
+            {'min_motion_frames': 1},
+            {'min_cluster_beams': 4},
+            {'delta_range_m': 0.04},
+                ]
         ),
 
-        # Octomap server
         Node(
             package='octomap_server',
             executable='octomap_server_node',
@@ -59,14 +76,9 @@ def generate_launch_description():
                 {'sensor_model/max_range': 10.0},
                 {'sensor_model/hit': 0.7},
                 {'sensor_model/miss': 0.4},
-                {'frame_id': 'base_link'},
+                {'frame_id': 'map'},
                 {'transform_tolerance': 0.5}
             ]
         ),
-        Node(
-            package='servo_control',
-            executable='lidar_bbox_open3d.py',
-            name='lidar_bbox_open3d'
-        ),
+        
     ])
-

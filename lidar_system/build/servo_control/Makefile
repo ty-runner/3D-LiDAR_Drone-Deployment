@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /root/lidar_system/build/servo_control
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -68,17 +79,37 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -92,48 +123,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,45 +168,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named scan_sequence_node
-
-# Build rule for target.
-scan_sequence_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 scan_sequence_node
-.PHONY : scan_sequence_node
-
-# fast build rule for target.
-scan_sequence_node/fast:
-	$(MAKE) -f CMakeFiles/scan_sequence_node.dir/build.make CMakeFiles/scan_sequence_node.dir/build
-.PHONY : scan_sequence_node/fast
-
-#=============================================================================
-# Target rules for targets named lidar_pointcloud_node
-
-# Build rule for target.
-lidar_pointcloud_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lidar_pointcloud_node
-.PHONY : lidar_pointcloud_node
-
-# fast build rule for target.
-lidar_pointcloud_node/fast:
-	$(MAKE) -f CMakeFiles/lidar_pointcloud_node.dir/build.make CMakeFiles/lidar_pointcloud_node.dir/build
-.PHONY : lidar_pointcloud_node/fast
-
-#=============================================================================
-# Target rules for targets named dynamic_tf_broadcaster
-
-# Build rule for target.
-dynamic_tf_broadcaster: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_tf_broadcaster
-.PHONY : dynamic_tf_broadcaster
-
-# fast build rule for target.
-dynamic_tf_broadcaster/fast:
-	$(MAKE) -f CMakeFiles/dynamic_tf_broadcaster.dir/build.make CMakeFiles/dynamic_tf_broadcaster.dir/build
-.PHONY : dynamic_tf_broadcaster/fast
-
-#=============================================================================
 # Target rules for targets named servo_control_uninstall
 
 # Build rule for target.
@@ -231,6 +192,71 @@ uninstall: cmake_check_build_system
 uninstall/fast:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_tf_broadcaster
+
+# Build rule for target.
+dynamic_tf_broadcaster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_tf_broadcaster
+.PHONY : dynamic_tf_broadcaster
+
+# fast build rule for target.
+dynamic_tf_broadcaster/fast:
+	$(MAKE) -f CMakeFiles/dynamic_tf_broadcaster.dir/build.make CMakeFiles/dynamic_tf_broadcaster.dir/build
+.PHONY : dynamic_tf_broadcaster/fast
+
+#=============================================================================
+# Target rules for targets named target_tracker_node
+
+# Build rule for target.
+target_tracker_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 target_tracker_node
+.PHONY : target_tracker_node
+
+# fast build rule for target.
+target_tracker_node/fast:
+	$(MAKE) -f CMakeFiles/target_tracker_node.dir/build.make CMakeFiles/target_tracker_node.dir/build
+.PHONY : target_tracker_node/fast
+
+#=============================================================================
+# Target rules for targets named lidar_pointcloud_node
+
+# Build rule for target.
+lidar_pointcloud_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lidar_pointcloud_node
+.PHONY : lidar_pointcloud_node
+
+# fast build rule for target.
+lidar_pointcloud_node/fast:
+	$(MAKE) -f CMakeFiles/lidar_pointcloud_node.dir/build.make CMakeFiles/lidar_pointcloud_node.dir/build
+.PHONY : lidar_pointcloud_node/fast
+
+#=============================================================================
+# Target rules for targets named mavros_tf_node
+
+# Build rule for target.
+mavros_tf_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mavros_tf_node
+.PHONY : mavros_tf_node
+
+# fast build rule for target.
+mavros_tf_node/fast:
+	$(MAKE) -f CMakeFiles/mavros_tf_node.dir/build.make CMakeFiles/mavros_tf_node.dir/build
+.PHONY : mavros_tf_node/fast
+
+#=============================================================================
+# Target rules for targets named scan_sequence_node
+
+# Build rule for target.
+scan_sequence_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 scan_sequence_node
+.PHONY : scan_sequence_node
+
+# fast build rule for target.
+scan_sequence_node/fast:
+	$(MAKE) -f CMakeFiles/scan_sequence_node.dir/build.make CMakeFiles/scan_sequence_node.dir/build
+.PHONY : scan_sequence_node/fast
 
 src/dynamic_tf_broadcaster.o: src/dynamic_tf_broadcaster.cpp.o
 
@@ -286,6 +312,33 @@ src/lidar_pointcloud_node.cpp.s:
 	$(MAKE) -f CMakeFiles/lidar_pointcloud_node.dir/build.make CMakeFiles/lidar_pointcloud_node.dir/src/lidar_pointcloud_node.cpp.s
 .PHONY : src/lidar_pointcloud_node.cpp.s
 
+src/mavros_tf_node.o: src/mavros_tf_node.cpp.o
+
+.PHONY : src/mavros_tf_node.o
+
+# target to build an object file
+src/mavros_tf_node.cpp.o:
+	$(MAKE) -f CMakeFiles/mavros_tf_node.dir/build.make CMakeFiles/mavros_tf_node.dir/src/mavros_tf_node.cpp.o
+.PHONY : src/mavros_tf_node.cpp.o
+
+src/mavros_tf_node.i: src/mavros_tf_node.cpp.i
+
+.PHONY : src/mavros_tf_node.i
+
+# target to preprocess a source file
+src/mavros_tf_node.cpp.i:
+	$(MAKE) -f CMakeFiles/mavros_tf_node.dir/build.make CMakeFiles/mavros_tf_node.dir/src/mavros_tf_node.cpp.i
+.PHONY : src/mavros_tf_node.cpp.i
+
+src/mavros_tf_node.s: src/mavros_tf_node.cpp.s
+
+.PHONY : src/mavros_tf_node.s
+
+# target to generate assembly for a file
+src/mavros_tf_node.cpp.s:
+	$(MAKE) -f CMakeFiles/mavros_tf_node.dir/build.make CMakeFiles/mavros_tf_node.dir/src/mavros_tf_node.cpp.s
+.PHONY : src/mavros_tf_node.cpp.s
+
 src/scan_sequence_node.o: src/scan_sequence_node.cpp.o
 
 .PHONY : src/scan_sequence_node.o
@@ -313,33 +366,68 @@ src/scan_sequence_node.cpp.s:
 	$(MAKE) -f CMakeFiles/scan_sequence_node.dir/build.make CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.s
 .PHONY : src/scan_sequence_node.cpp.s
 
+src/target_tracker_node.o: src/target_tracker_node.cpp.o
+
+.PHONY : src/target_tracker_node.o
+
+# target to build an object file
+src/target_tracker_node.cpp.o:
+	$(MAKE) -f CMakeFiles/target_tracker_node.dir/build.make CMakeFiles/target_tracker_node.dir/src/target_tracker_node.cpp.o
+.PHONY : src/target_tracker_node.cpp.o
+
+src/target_tracker_node.i: src/target_tracker_node.cpp.i
+
+.PHONY : src/target_tracker_node.i
+
+# target to preprocess a source file
+src/target_tracker_node.cpp.i:
+	$(MAKE) -f CMakeFiles/target_tracker_node.dir/build.make CMakeFiles/target_tracker_node.dir/src/target_tracker_node.cpp.i
+.PHONY : src/target_tracker_node.cpp.i
+
+src/target_tracker_node.s: src/target_tracker_node.cpp.s
+
+.PHONY : src/target_tracker_node.s
+
+# target to generate assembly for a file
+src/target_tracker_node.cpp.s:
+	$(MAKE) -f CMakeFiles/target_tracker_node.dir/build.make CMakeFiles/target_tracker_node.dir/src/target_tracker_node.cpp.s
+.PHONY : src/target_tracker_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... scan_sequence_node"
-	@echo "... lidar_pointcloud_node"
-	@echo "... dynamic_tf_broadcaster"
-	@echo "... edit_cache"
-	@echo "... test"
 	@echo "... servo_control_uninstall"
 	@echo "... uninstall"
+	@echo "... test"
+	@echo "... install/strip"
+	@echo "... dynamic_tf_broadcaster"
+	@echo "... target_tracker_node"
+	@echo "... lidar_pointcloud_node"
+	@echo "... mavros_tf_node"
+	@echo "... scan_sequence_node"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... install/local"
 	@echo "... src/dynamic_tf_broadcaster.o"
 	@echo "... src/dynamic_tf_broadcaster.i"
 	@echo "... src/dynamic_tf_broadcaster.s"
 	@echo "... src/lidar_pointcloud_node.o"
 	@echo "... src/lidar_pointcloud_node.i"
 	@echo "... src/lidar_pointcloud_node.s"
+	@echo "... src/mavros_tf_node.o"
+	@echo "... src/mavros_tf_node.i"
+	@echo "... src/mavros_tf_node.s"
 	@echo "... src/scan_sequence_node.o"
 	@echo "... src/scan_sequence_node.i"
 	@echo "... src/scan_sequence_node.s"
+	@echo "... src/target_tracker_node.o"
+	@echo "... src/target_tracker_node.i"
+	@echo "... src/target_tracker_node.s"
 .PHONY : help
 
 

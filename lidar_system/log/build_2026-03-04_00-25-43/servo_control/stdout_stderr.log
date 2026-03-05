@@ -1,0 +1,13 @@
+[ 20%] Built target target_tracker_node
+[ 40%] Built target lidar_pointcloud_node
+[ 60%] Built target mavros_tf_node
+[ 80%] Built target dynamic_tf_broadcaster
+Scanning dependencies of target scan_sequence_node
+[ 90%] Building CXX object CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:275:22: error: expected ‘;’ at end of member declaration
+  275 |   int FRAME_COUNT {10}
+      |                      ^
+      |                       ;
+make[2]: *** [CMakeFiles/scan_sequence_node.dir/build.make:63: CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:248: CMakeFiles/scan_sequence_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

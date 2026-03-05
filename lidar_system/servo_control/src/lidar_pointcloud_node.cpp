@@ -5,7 +5,6 @@
 #include "tf2_ros/buffer.h"
 #include "tf2_ros/transform_listener.h"
 #include "tf2/exceptions.h"
-#include "tf2_sensor_msgs/tf2_sensor_msgs.h"
 
 class LaserToPointCloudNode : public rclcpp::Node
 {
@@ -26,28 +25,15 @@ private:
   {
     sensor_msgs::msg::PointCloud2 cloud_out;
     try {
-      // Project the laser scan into a point cloud in the scan's frame.
-      projector_.projectLaser(*scan_msg, cloud_out);
-      
-      // Lookup transform from scan frame to "base_link".
-      auto transform = tf_buffer_.lookupTransform(
-        "base_link", scan_msg->header.frame_id, scan_msg->header.stamp,
-        rclcpp::Duration::from_seconds(1.0));
+      // This does per-ray TF interpolation using time_increment.
+      // Each ray gets transformed using the correct TF at its capture time,
+      // not just one TF for the entire scan.
+      projector_.transformLaserScanToPointCloud(
+        "base_link", *scan_msg, cloud_out, tf_buffer_,
+        -1.0,  // range_cutoff (-1 = use scan's max_range)
+        laser_geometry::channel_option::Intensity);
 
-      sensor_msgs::msg::PointCloud2 cloud_transformed;
-      tf2::doTransform(cloud_out, cloud_transformed, transform);
-      cloud_transformed.header.frame_id = "base_link";
-
-      pointcloud_publisher_->publish(cloud_transformed);
-      /*RCLCPP_INFO(this->get_logger(), "Published PointCloud2 data");
-      RCLCPP_INFO(this->get_logger(), "Delta time: ");
-      rclcpp::Time now = this->get_clock()->now();
-      rclcpp::Time scan_time = scan_msg->header.stamp;
-
-      rclcpp::Duration diff = now - scan_time;
-      double age_sec = diff.seconds();
-      RCLCPP_INFO(this->get_logger(), "Scan age: %.6f seconds (scan: %.3f, now: %.3f)", age_sec, scan_time.seconds(), now.seconds());
-      */
+      pointcloud_publisher_->publish(cloud_out);
     }
     catch (const tf2::TransformException & ex) {
       RCLCPP_ERROR(this->get_logger(), "Could not transform scan: %s", ex.what());

@@ -1,0 +1,10 @@
+/root/lidar_system/servo_control/src/mavros_tf_node.cpp: In member function ‘void MavrosTFNode::pose_callback(geometry_msgs::msg::PoseStamped_<std::allocator<void> >::SharedPtr)’:
+/root/lidar_system/servo_control/src/mavros_tf_node.cpp:37:52: error: expected unqualified-id before ‘-’ token
+   37 |     t.transform.translation.z = msg->pose.position.-z;
+      |                                                    ^
+/root/lidar_system/servo_control/src/mavros_tf_node.cpp:37:53: error: ‘z’ was not declared in this scope
+   37 |     t.transform.translation.z = msg->pose.position.-z;
+      |                                                     ^
+make[2]: *** [CMakeFiles/mavros_tf_node.dir/build.make:63: CMakeFiles/mavros_tf_node.dir/src/mavros_tf_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/mavros_tf_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -80,17 +80,16 @@ scan_sequence_node_EXTERNAL_OBJECTS =
 scan_sequence_node: CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o
 scan_sequence_node: CMakeFiles/scan_sequence_node.dir/build.make
 scan_sequence_node: /opt/ros/foxy/lib/librclcpp.so
+scan_sequence_node: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
+scan_sequence_node: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_c.so
+scan_sequence_node: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
+scan_sequence_node: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 scan_sequence_node: /opt/ros/foxy/lib/liblibstatistics_collector.so
 scan_sequence_node: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_c.so
 scan_sequence_node: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_generator_c.so
 scan_sequence_node: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_c.so
 scan_sequence_node: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_cpp.so
 scan_sequence_node: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_cpp.so
-scan_sequence_node: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
-scan_sequence_node: /opt/ros/foxy/lib/libstd_msgs__rosidl_generator_c.so
-scan_sequence_node: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_c.so
-scan_sequence_node: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
-scan_sequence_node: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_cpp.so
 scan_sequence_node: /opt/ros/foxy/lib/librcl.so
 scan_sequence_node: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
 scan_sequence_node: /opt/ros/foxy/lib/librcl_interfaces__rosidl_generator_c.so
@@ -113,6 +112,18 @@ scan_sequence_node: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_generator_c.so
 scan_sequence_node: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_c.so
 scan_sequence_node: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
 scan_sequence_node: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
+scan_sequence_node: /opt/ros/foxy/lib/libtracetools.so
+scan_sequence_node: /opt/ros/foxy/lib/libsensor_msgs__rosidl_generator_c.so
+scan_sequence_node: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
+scan_sequence_node: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_generator_c.so
+scan_sequence_node: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_c.so
+scan_sequence_node: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
+scan_sequence_node: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
+scan_sequence_node: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
+scan_sequence_node: /opt/ros/foxy/lib/libstd_msgs__rosidl_generator_c.so
+scan_sequence_node: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_c.so
+scan_sequence_node: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
+scan_sequence_node: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_cpp.so
 scan_sequence_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 scan_sequence_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_generator_c.so
 scan_sequence_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
@@ -125,7 +136,6 @@ scan_sequence_node: /opt/ros/foxy/lib/librosidl_typesupport_c.so
 scan_sequence_node: /opt/ros/foxy/lib/librcpputils.so
 scan_sequence_node: /opt/ros/foxy/lib/librosidl_runtime_c.so
 scan_sequence_node: /opt/ros/foxy/lib/librcutils.so
-scan_sequence_node: /opt/ros/foxy/lib/libtracetools.so
 scan_sequence_node: CMakeFiles/scan_sequence_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/lidar_system/build/servo_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable scan_sequence_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scan_sequence_node.dir/link.txt --verbose=$(VERBOSE)

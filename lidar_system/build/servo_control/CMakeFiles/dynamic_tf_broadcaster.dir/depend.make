@@ -12,14 +12,6 @@ CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/builtin_interfaces/msg/duration.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/builtin_interfaces/msg/time.hpp
-CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/point__struct.hpp
-CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/point__traits.hpp
-CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/pose__struct.hpp
-CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/pose__traits.hpp
-CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/pose_stamped__builder.hpp
-CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/pose_stamped__struct.hpp
-CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/pose_stamped__traits.hpp
-CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/pose_stamped__type_support.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__struct.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__traits.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/transform__struct.hpp
@@ -30,7 +22,6 @@ CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/transform_stamped__type_support.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/vector3__struct.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/vector3__traits.hpp
-CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/pose_stamped.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/transform_stamped.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/libstatistics_collector/collector/collector.hpp
@@ -336,6 +327,7 @@ CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/tf2_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/tf2_msgs/msg/tf_message.hpp
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/tf2_ros/qos.hpp
+CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/tf2_ros/static_transform_broadcaster.h
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/tf2_ros/transform_broadcaster.h
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/tf2_ros/visibility_control.h
 CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o: /opt/ros/foxy/include/tracetools/config.h
