@@ -53,6 +53,9 @@ def generate_launch_description():
             executable='mavros_tf_node',
             name='mavros_tf_node'
 	    ),
+	
+
+
 
         Node(
             package='servo_control',
@@ -63,6 +66,21 @@ def generate_launch_description():
             {'min_cluster_beams': 4},
             {'delta_range_m': 0.04},
                 ]
+        ),
+
+	Node(
+            package='servo_control',
+            executable='local_dimensions_node',
+            name='local_dimensions_node',
+            parameters=[
+		{'octomap_topic': '/octomap_binary'},
+                {'drone_radius': 0.20},
+                {'drone_height': 0.42},
+                {'footprint_step': 0.10},
+                {'search_up_distance': 0.3},
+                {'search_down_distance': 0.3},
+                {'unkown_is_blocked': True}
+            ]
         ),
 
         Node(

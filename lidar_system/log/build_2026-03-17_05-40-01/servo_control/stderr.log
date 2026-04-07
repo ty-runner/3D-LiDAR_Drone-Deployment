@@ -1,0 +1,19 @@
+/root/lidar_system/servo_control/src/target_tracker_node.cpp: In constructor ‘TargetTrackerNode::TargetTrackerNode()’:
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:290:7: warning: ‘TargetTrackerNode::scan_count_’ will be initialized after [-Wreorder]
+  290 |   int scan_count_;
+      |       ^~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:289:8: warning:   ‘bool TargetTrackerNode::capture_next_’ [-Wreorder]
+  289 |   bool capture_next_;
+      |        ^~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+   14 |   TargetTrackerNode()
+      |   ^~~~~~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:289:8: warning: ‘TargetTrackerNode::capture_next_’ will be initialized after [-Wreorder]
+  289 |   bool capture_next_;
+      |        ^~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:288:8: warning:   ‘bool TargetTrackerNode::bg_valid_’ [-Wreorder]
+  288 |   bool bg_valid_;
+      |        ^~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+   14 |   TargetTrackerNode()
+      |   ^~~~~~~~~~~~~~~~~

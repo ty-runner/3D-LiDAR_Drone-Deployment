@@ -1,0 +1,29 @@
+/root/lidar_system/servo_control/src/target_tracker_node.cpp: In constructor ‘TargetTrackerNode::TargetTrackerNode()’:
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:297:7: warning: ‘TargetTrackerNode::scan_count_’ will be initialized after [-Wreorder]
+  297 |   int scan_count_;
+      |       ^~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:296:8: warning:   ‘bool TargetTrackerNode::capture_next_’ [-Wreorder]
+  296 |   bool capture_next_;
+      |        ^~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+   14 |   TargetTrackerNode()
+      |   ^~~~~~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:296:8: warning: ‘TargetTrackerNode::capture_next_’ will be initialized after [-Wreorder]
+  296 |   bool capture_next_;
+      |        ^~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:295:8: warning:   ‘bool TargetTrackerNode::bg_valid_’ [-Wreorder]
+  295 |   bool bg_valid_;
+      |        ^~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+   14 |   TargetTrackerNode()
+      |   ^~~~~~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp: In constructor ‘ScanSequenceNode::ScanSequenceNode()’:
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:714:16: warning: ‘ScanSequenceNode::tilt_settle_start_’ will be initialized after [-Wreorder]
+  714 |   rclcpp::Time tilt_settle_start_;
+      |                ^~~~~~~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:691:16: warning:   ‘rclcpp::Time ScanSequenceNode::last_target_time_’ [-Wreorder]
+  691 |   rclcpp::Time last_target_time_;
+      |                ^~~~~~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+   14 |   ScanSequenceNode()
+      |   ^~~~~~~~~~~~~~~~

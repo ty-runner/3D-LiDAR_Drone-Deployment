@@ -1,0 +1,40 @@
+[0.117s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[0.933s] Scanning dependencies of target target_tracker_node
+[1.088s] [ 10%] Building CXX object CMakeFiles/target_tracker_node.dir/src/target_tracker_node.cpp.o
+[1.189s] [ 30%] Built target lidar_pointcloud_node
+[1.206s] [ 50%] Built target dynamic_tf_broadcaster
+[1.432s] [ 70%] Built target mavros_tf_node
+[2.064s] Scanning dependencies of target scan_sequence_node
+[2.113s] [ 80%] Building CXX object CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o
+[11.026s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp: In member function ‘void ScanSequenceNode::publish_profile_complete()’:
+[11.027s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:387:17: warning: structured bindings only available with ‘-std=c++17’ or ‘-std=gnu++17’
+[11.027s]   387 |     for (auto & [tilt, count] : profile_data_) {
+[11.028s]       |                 ^
+[37.284s] [ 90%] Linking CXX executable target_tracker_node
+[38.843s] [ 90%] Built target target_tracker_node
+[49.644s] [100%] Linking CXX executable scan_sequence_node
+[51.557s] [100%] Built target scan_sequence_node
+[51.613s] Invoked command in '/root/lidar_system/build/servo_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[51.751s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/lidar_system/build/servo_control
+[51.791s] -- Install configuration: ""
+[51.794s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/dynamic_tf_broadcaster
+[51.800s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/lidar_pointcloud_node
+[51.803s] -- Installing: /root/lidar_system/install/servo_control/lib/servo_control/scan_sequence_node
+[51.823s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/scan_sequence_node" to ""
+[51.825s] -- Installing: /root/lidar_system/install/servo_control/lib/servo_control/target_tracker_node
+[51.838s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/target_tracker_node" to ""
+[51.843s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/mavros_tf_node
+[51.846s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/pythonpath.sh
+[51.847s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/environment/pythonpath.dsv
+[51.849s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control
+[51.866s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/__init__.py
+[52.026s] Listing '/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control'...
+[52.054s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/servo_motor_node.py
+[52.055s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/lidar_bbox_open3d.py
+[52.056s] CMake Error at cmake_install.cmake:161 (file):
+[52.057s]   file INSTALL cannot find
+[52.057s]   "/root/lidar_system/servo_control/scripts/profile_classifier_node.py": No
+[52.058s]   such file or directory.
+[52.059s] 
+[52.061s] 
+[52.062s] Invoked command in '/root/lidar_system/build/servo_control' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/lidar_system/build/servo_control

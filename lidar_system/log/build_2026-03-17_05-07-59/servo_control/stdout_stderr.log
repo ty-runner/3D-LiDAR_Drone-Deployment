@@ -1,0 +1,70 @@
+Scanning dependencies of target target_tracker_node
+[ 20%] Built target dynamic_tf_broadcaster
+[ 40%] Built target mavros_tf_node
+[ 60%] Built target lidar_pointcloud_node
+[ 70%] Building CXX object CMakeFiles/target_tracker_node.dir/src/target_tracker_node.cpp.o
+Scanning dependencies of target scan_sequence_node
+[ 80%] Building CXX object CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o
+/root/lidar_system/servo_control/src/target_tracker_node.cpp: In constructor ‘TargetTrackerNode::TargetTrackerNode()’:
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:290:7: warning: ‘TargetTrackerNode::scan_count_’ will be initialized after [-Wreorder]
+  290 |   int scan_count_;
+      |       ^~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:289:8: warning:   ‘bool TargetTrackerNode::capture_next_’ [-Wreorder]
+  289 |   bool capture_next_;
+      |        ^~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+   14 |   TargetTrackerNode()
+      |   ^~~~~~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:289:8: warning: ‘TargetTrackerNode::capture_next_’ will be initialized after [-Wreorder]
+  289 |   bool capture_next_;
+      |        ^~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:288:8: warning:   ‘bool TargetTrackerNode::bg_valid_’ [-Wreorder]
+  288 |   bool bg_valid_;
+      |        ^~~~~~~~~
+/root/lidar_system/servo_control/src/target_tracker_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+   14 |   TargetTrackerNode()
+      |   ^~~~~~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp: In constructor ‘ScanSequenceNode::ScanSequenceNode()’:
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:659:16: warning: ‘ScanSequenceNode::tilt_settle_start_’ will be initialized after [-Wreorder]
+  659 |   rclcpp::Time tilt_settle_start_;
+      |                ^~~~~~~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:638:16: warning:   ‘rclcpp::Time ScanSequenceNode::last_target_time_’ [-Wreorder]
+  638 |   rclcpp::Time last_target_time_;
+      |                ^~~~~~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+   14 |   ScanSequenceNode()
+      |   ^~~~~~~~~~~~~~~~
+[ 90%] Linking CXX executable target_tracker_node
+[ 90%] Built target target_tracker_node
+[100%] Linking CXX executable scan_sequence_node
+[100%] Built target scan_sequence_node
+-- Install configuration: ""
+-- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/dynamic_tf_broadcaster
+-- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/lidar_pointcloud_node
+-- Installing: /root/lidar_system/install/servo_control/lib/servo_control/scan_sequence_node
+-- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/scan_sequence_node" to ""
+-- Installing: /root/lidar_system/install/servo_control/lib/servo_control/target_tracker_node
+-- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/target_tracker_node" to ""
+-- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/mavros_tf_node
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/pythonpath.sh
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/pythonpath.dsv
+-- Up-to-date: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control
+-- Up-to-date: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/__init__.py
+Listing '/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control'...
+-- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/servo_motor_node.py
+-- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/lidar_bbox_open3d.py
+-- Up-to-date: /root/lidar_system/install/servo_control/share/ament_index/resource_index/package_run_dependencies/servo_control
+-- Up-to-date: /root/lidar_system/install/servo_control/share/ament_index/resource_index/parent_prefix_path/servo_control
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/ament_prefix_path.sh
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/ament_prefix_path.dsv
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/path.sh
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/path.dsv
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.bash
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.sh
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.zsh
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.dsv
+-- Installing: /root/lidar_system/install/servo_control/share/servo_control/package.dsv
+-- Up-to-date: /root/lidar_system/install/servo_control/share/ament_index/resource_index/packages/servo_control
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_controlConfig.cmake
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_controlConfig-version.cmake
+-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/package.xml

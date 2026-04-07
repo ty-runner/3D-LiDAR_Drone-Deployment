@@ -1,0 +1,472 @@
+[0.000000] (-) TimerEvent: {}
+[0.000748] (rplidar_ros) JobQueued: {'identifier': 'rplidar_ros', 'dependencies': OrderedDict()}
+[0.000895] (servo_control) JobQueued: {'identifier': 'servo_control', 'dependencies': OrderedDict()}
+[0.002742] (rplidar_ros) JobStarted: {'identifier': 'rplidar_ros'}
+[0.061129] (servo_control) JobStarted: {'identifier': 'servo_control'}
+[0.099350] (-) TimerEvent: {}
+[0.100489] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'cmake'}
+[0.103402] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'build'}
+[0.107952] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/lidar_system/build/rplidar_ros', '--', '-j4', '-l4'], 'cwd': '/root/lidar_system/build/rplidar_ros', 'env': OrderedDict([('HOSTNAME', 'ubuntu-desktop'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/fastdds.xml'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/lidar_system/build/rplidar_ros'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.118657] (servo_control) JobProgress: {'identifier': 'servo_control', 'progress': 'cmake'}
+[0.121831] (servo_control) JobProgress: {'identifier': 'servo_control', 'progress': 'build'}
+[0.123396] (servo_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/lidar_system/build/servo_control', '--', '-j4', '-l4'], 'cwd': '/root/lidar_system/build/servo_control', 'env': OrderedDict([('HOSTNAME', 'ubuntu-desktop'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/fastdds.xml'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/lidar_system/build/servo_control'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.199548] (-) TimerEvent: {}
+[0.299913] (-) TimerEvent: {}
+[0.386476] (rplidar_ros) StdoutLine: {'line': b'[  5%] Built target rplidar_client\n'}
+[0.400017] (servo_control) StdoutLine: {'line': b'[ 20%] Built target dynamic_tf_broadcaster\n'}
+[0.400643] (-) TimerEvent: {}
+[0.500981] (-) TimerEvent: {}
+[0.546976] (servo_control) StdoutLine: {'line': b'[ 40%] Built target mavros_tf_node\n'}
+[0.548060] (rplidar_ros) StdoutLine: {'line': b'[ 52%] Built target rplidar_node\n'}
+[0.601196] (-) TimerEvent: {}
+[0.651398] (servo_control) StdoutLine: {'line': b'Scanning dependencies of target scan_sequence_node\n'}
+[0.701447] (-) TimerEvent: {}
+[0.706672] (rplidar_ros) StdoutLine: {'line': b'[100%] Built target rplidar_composition\n'}
+[0.713253] (servo_control) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o\n'}
+[0.747288] (rplidar_ros) CommandEnded: {'returncode': 0}
+[0.801671] (-) TimerEvent: {}
+[0.902088] (-) TimerEvent: {}
+[0.916978] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'install'}
+[0.957639] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/lidar_system/build/rplidar_ros'], 'cwd': '/root/lidar_system/build/rplidar_ros', 'env': OrderedDict([('HOSTNAME', 'ubuntu-desktop'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/fastdds.xml'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/lidar_system/build/rplidar_ros'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.996864] (rplidar_ros) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.997752] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch\n'}
+[0.999596] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3_launch.py\n'}
+[1.000328] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m8_launch.py\n'}
+[1.000688] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m7_launch.py\n'}
+[1.001027] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2_launch.py\n'}
+[1.001702] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp_launch.py\n'}
+[1.002059] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a1_launch.py\n'}
+[1.002391] (-) TimerEvent: {}
+[1.002562] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_t1_launch.py\n'}
+[1.003161] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/system_launch.py\n'}
+[1.004379] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a1_launch.py\n'}
+[1.005537] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_launch.py\n'}
+[1.006598] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2_launch.py\n'}
+[1.007931] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2e_launch.py\n'}
+[1.008329] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m12_launch.py\n'}
+[1.008661] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m7_launch.py\n'}
+[1.008997] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2e_launch.py\n'}
+[1.009373] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp_launch.py\n'}
+[1.009745] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m12_launch.py\n'}
+[1.010122] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_launch.py\n'}
+[1.010545] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/__pycache__\n'}
+[1.010956] (rplidar_ros) StdoutLine: {'line': b'-- Installing: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/__pycache__/system_launch.cpython-38.pyc\n'}
+[1.011409] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s3_launch.py\n'}
+[1.011839] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m8_launch.py\n'}
+[1.012271] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_t1_launch.py\n'}
+[1.013241] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3_launch.py\n'}
+[1.014083] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/rplidar_c1_launch.py\n'}
+[1.017374] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s3_launch.py\n'}
+[1.021357] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_c1_launch.py\n'}
+[1.022121] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/rviz\n'}
+[1.022657] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/rviz/rplidar_ros.rviz\n'}
+[1.023474] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/lib/rplidar_ros/rplidar_node\n'}
+[1.024239] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/lib/rplidar_ros/rplidar_composition\n'}
+[1.024707] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/lib/rplidar_ros/rplidar_client\n'}
+[1.025251] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros\n'}
+[1.025958] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros\n'}
+[1.026439] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh\n'}
+[1.027163] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv\n'}
+[1.027861] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/environment/path.sh\n'}
+[1.028328] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/environment/path.dsv\n'}
+[1.030649] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/local_setup.bash\n'}
+[1.031576] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/local_setup.sh\n'}
+[1.032038] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/local_setup.zsh\n'}
+[1.032380] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/local_setup.dsv\n'}
+[1.032707] (rplidar_ros) StdoutLine: {'line': b'-- Installing: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/package.dsv\n'}
+[1.033031] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros\n'}
+[1.033358] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.033682] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.034039] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake\n'}
+[1.034350] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake\n'}
+[1.034670] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/rplidar_ros/share/rplidar_ros/package.xml\n'}
+[1.034983] (rplidar_ros) CommandEnded: {'returncode': 0}
+[1.104278] (-) TimerEvent: {}
+[1.204696] (-) TimerEvent: {}
+[1.305297] (-) TimerEvent: {}
+[1.341661] (rplidar_ros) JobEnded: {'identifier': 'rplidar_ros', 'rc': 0}
+[1.405536] (-) TimerEvent: {}
+[1.505898] (-) TimerEvent: {}
+[1.606260] (-) TimerEvent: {}
+[1.706621] (-) TimerEvent: {}
+[1.807047] (-) TimerEvent: {}
+[1.907528] (-) TimerEvent: {}
+[2.007890] (-) TimerEvent: {}
+[2.108241] (-) TimerEvent: {}
+[2.208599] (-) TimerEvent: {}
+[2.308965] (-) TimerEvent: {}
+[2.409315] (-) TimerEvent: {}
+[2.509672] (-) TimerEvent: {}
+[2.610031] (-) TimerEvent: {}
+[2.710450] (-) TimerEvent: {}
+[2.810802] (-) TimerEvent: {}
+[2.911169] (-) TimerEvent: {}
+[3.011618] (-) TimerEvent: {}
+[3.111975] (-) TimerEvent: {}
+[3.212341] (-) TimerEvent: {}
+[3.312713] (-) TimerEvent: {}
+[3.413068] (-) TimerEvent: {}
+[3.513435] (-) TimerEvent: {}
+[3.613814] (-) TimerEvent: {}
+[3.714225] (-) TimerEvent: {}
+[3.814592] (-) TimerEvent: {}
+[3.915022] (-) TimerEvent: {}
+[4.015497] (-) TimerEvent: {}
+[4.115890] (-) TimerEvent: {}
+[4.216369] (-) TimerEvent: {}
+[4.316727] (-) TimerEvent: {}
+[4.417141] (-) TimerEvent: {}
+[4.517623] (-) TimerEvent: {}
+[4.617988] (-) TimerEvent: {}
+[4.718407] (-) TimerEvent: {}
+[4.818830] (-) TimerEvent: {}
+[4.919263] (-) TimerEvent: {}
+[5.019713] (-) TimerEvent: {}
+[5.120130] (-) TimerEvent: {}
+[5.220595] (-) TimerEvent: {}
+[5.321014] (-) TimerEvent: {}
+[5.421436] (-) TimerEvent: {}
+[5.521859] (-) TimerEvent: {}
+[5.622288] (-) TimerEvent: {}
+[5.722727] (-) TimerEvent: {}
+[5.823147] (-) TimerEvent: {}
+[5.923620] (-) TimerEvent: {}
+[6.024042] (-) TimerEvent: {}
+[6.124463] (-) TimerEvent: {}
+[6.224886] (-) TimerEvent: {}
+[6.325250] (-) TimerEvent: {}
+[6.425695] (-) TimerEvent: {}
+[6.526130] (-) TimerEvent: {}
+[6.626599] (-) TimerEvent: {}
+[6.727009] (-) TimerEvent: {}
+[6.824485] (servo_control) StderrLine: {'line': b'/root/lidar_system/servo_control/src/scan_sequence_node.cpp: In member function \xe2\x80\x98void ScanSequenceNode::detected_callback(std_msgs::msg::Bool_<std::allocator<void> >::SharedPtr)\xe2\x80\x99:\n'}
+[6.825157] (servo_control) StderrLine: {'line': b'/root/lidar_system/servo_control/src/scan_sequence_node.cpp:155:63: warning: unused parameter \xe2\x80\x98msg\xe2\x80\x99 [-Wunused-parameter]\n'}
+[6.825543] (servo_control) StderrLine: {'line': b'  155 |   void detected_callback(const std_msgs::msg::Bool::SharedPtr msg)\n'}
+[6.825899] (servo_control) StderrLine: {'line': b'      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\n'}
+[6.827117] (-) TimerEvent: {}
+[6.927470] (-) TimerEvent: {}
+[7.027833] (-) TimerEvent: {}
+[7.128188] (-) TimerEvent: {}
+[7.228555] (-) TimerEvent: {}
+[7.328918] (-) TimerEvent: {}
+[7.429286] (-) TimerEvent: {}
+[7.529653] (-) TimerEvent: {}
+[7.630027] (-) TimerEvent: {}
+[7.730393] (-) TimerEvent: {}
+[7.830751] (-) TimerEvent: {}
+[7.931172] (-) TimerEvent: {}
+[8.031611] (-) TimerEvent: {}
+[8.131970] (-) TimerEvent: {}
+[8.232338] (-) TimerEvent: {}
+[8.332766] (-) TimerEvent: {}
+[8.433123] (-) TimerEvent: {}
+[8.533490] (-) TimerEvent: {}
+[8.633857] (-) TimerEvent: {}
+[8.734289] (-) TimerEvent: {}
+[8.834655] (-) TimerEvent: {}
+[8.935086] (-) TimerEvent: {}
+[9.035470] (-) TimerEvent: {}
+[9.135844] (-) TimerEvent: {}
+[9.236207] (-) TimerEvent: {}
+[9.336569] (-) TimerEvent: {}
+[9.436935] (-) TimerEvent: {}
+[9.537368] (-) TimerEvent: {}
+[9.637798] (-) TimerEvent: {}
+[9.738220] (-) TimerEvent: {}
+[9.838655] (-) TimerEvent: {}
+[9.939091] (-) TimerEvent: {}
+[10.039465] (-) TimerEvent: {}
+[10.139905] (-) TimerEvent: {}
+[10.240325] (-) TimerEvent: {}
+[10.340687] (-) TimerEvent: {}
+[10.441069] (-) TimerEvent: {}
+[10.541432] (-) TimerEvent: {}
+[10.641793] (-) TimerEvent: {}
+[10.742224] (-) TimerEvent: {}
+[10.842652] (-) TimerEvent: {}
+[10.943060] (-) TimerEvent: {}
+[11.043438] (-) TimerEvent: {}
+[11.143803] (-) TimerEvent: {}
+[11.244166] (-) TimerEvent: {}
+[11.344529] (-) TimerEvent: {}
+[11.444888] (-) TimerEvent: {}
+[11.545270] (-) TimerEvent: {}
+[12.004599] (-) TimerEvent: {}
+[12.104967] (-) TimerEvent: {}
+[12.205386] (-) TimerEvent: {}
+[12.305821] (-) TimerEvent: {}
+[12.406244] (-) TimerEvent: {}
+[12.506675] (-) TimerEvent: {}
+[12.607037] (-) TimerEvent: {}
+[12.707472] (-) TimerEvent: {}
+[12.807966] (-) TimerEvent: {}
+[12.908382] (-) TimerEvent: {}
+[13.008804] (-) TimerEvent: {}
+[13.109173] (-) TimerEvent: {}
+[13.209602] (-) TimerEvent: {}
+[13.309955] (-) TimerEvent: {}
+[13.410319] (-) TimerEvent: {}
+[13.510674] (-) TimerEvent: {}
+[13.611035] (-) TimerEvent: {}
+[13.711442] (-) TimerEvent: {}
+[13.811809] (-) TimerEvent: {}
+[13.912174] (-) TimerEvent: {}
+[14.012541] (-) TimerEvent: {}
+[14.112903] (-) TimerEvent: {}
+[14.213279] (-) TimerEvent: {}
+[14.313653] (-) TimerEvent: {}
+[14.414035] (-) TimerEvent: {}
+[14.514464] (-) TimerEvent: {}
+[14.614839] (-) TimerEvent: {}
+[14.715278] (-) TimerEvent: {}
+[14.815757] (-) TimerEvent: {}
+[14.916115] (-) TimerEvent: {}
+[15.016546] (-) TimerEvent: {}
+[15.116977] (-) TimerEvent: {}
+[15.217337] (-) TimerEvent: {}
+[15.317769] (-) TimerEvent: {}
+[15.418140] (-) TimerEvent: {}
+[15.518569] (-) TimerEvent: {}
+[15.618935] (-) TimerEvent: {}
+[15.719416] (-) TimerEvent: {}
+[15.819796] (-) TimerEvent: {}
+[15.920215] (-) TimerEvent: {}
+[16.020573] (-) TimerEvent: {}
+[16.121103] (-) TimerEvent: {}
+[16.221530] (-) TimerEvent: {}
+[16.321926] (-) TimerEvent: {}
+[16.422293] (-) TimerEvent: {}
+[16.522731] (-) TimerEvent: {}
+[16.623103] (-) TimerEvent: {}
+[16.723490] (-) TimerEvent: {}
+[16.823858] (-) TimerEvent: {}
+[16.924228] (-) TimerEvent: {}
+[17.024596] (-) TimerEvent: {}
+[17.125021] (-) TimerEvent: {}
+[17.225460] (-) TimerEvent: {}
+[17.326061] (-) TimerEvent: {}
+[17.426483] (-) TimerEvent: {}
+[17.526837] (-) TimerEvent: {}
+[17.627215] (-) TimerEvent: {}
+[17.727663] (-) TimerEvent: {}
+[17.828026] (-) TimerEvent: {}
+[17.928393] (-) TimerEvent: {}
+[18.028756] (-) TimerEvent: {}
+[18.129122] (-) TimerEvent: {}
+[18.229489] (-) TimerEvent: {}
+[18.329862] (-) TimerEvent: {}
+[18.430232] (-) TimerEvent: {}
+[18.530660] (-) TimerEvent: {}
+[18.631102] (-) TimerEvent: {}
+[18.731484] (-) TimerEvent: {}
+[18.831905] (-) TimerEvent: {}
+[18.932327] (-) TimerEvent: {}
+[19.032758] (-) TimerEvent: {}
+[19.133186] (-) TimerEvent: {}
+[19.233617] (-) TimerEvent: {}
+[19.333978] (-) TimerEvent: {}
+[19.434426] (-) TimerEvent: {}
+[19.534792] (-) TimerEvent: {}
+[19.635243] (-) TimerEvent: {}
+[19.735761] (-) TimerEvent: {}
+[19.836123] (-) TimerEvent: {}
+[19.936543] (-) TimerEvent: {}
+[20.036903] (-) TimerEvent: {}
+[20.137319] (-) TimerEvent: {}
+[20.237691] (-) TimerEvent: {}
+[20.338120] (-) TimerEvent: {}
+[20.438482] (-) TimerEvent: {}
+[20.538910] (-) TimerEvent: {}
+[20.639365] (-) TimerEvent: {}
+[20.739789] (-) TimerEvent: {}
+[20.840210] (-) TimerEvent: {}
+[20.940655] (-) TimerEvent: {}
+[21.041075] (-) TimerEvent: {}
+[21.141497] (-) TimerEvent: {}
+[21.241918] (-) TimerEvent: {}
+[21.342344] (-) TimerEvent: {}
+[21.442762] (-) TimerEvent: {}
+[21.543223] (-) TimerEvent: {}
+[21.643696] (-) TimerEvent: {}
+[21.744106] (-) TimerEvent: {}
+[21.849837] (-) TimerEvent: {}
+[21.950246] (-) TimerEvent: {}
+[22.050606] (-) TimerEvent: {}
+[22.151019] (-) TimerEvent: {}
+[22.251447] (-) TimerEvent: {}
+[22.351797] (-) TimerEvent: {}
+[22.452205] (-) TimerEvent: {}
+[22.552626] (-) TimerEvent: {}
+[22.652978] (-) TimerEvent: {}
+[22.753398] (-) TimerEvent: {}
+[22.853749] (-) TimerEvent: {}
+[22.954173] (-) TimerEvent: {}
+[23.054585] (-) TimerEvent: {}
+[23.155007] (-) TimerEvent: {}
+[23.255497] (-) TimerEvent: {}
+[23.355921] (-) TimerEvent: {}
+[23.456333] (-) TimerEvent: {}
+[23.556758] (-) TimerEvent: {}
+[23.657167] (-) TimerEvent: {}
+[23.757615] (-) TimerEvent: {}
+[23.857971] (-) TimerEvent: {}
+[23.958393] (-) TimerEvent: {}
+[24.058817] (-) TimerEvent: {}
+[24.159236] (-) TimerEvent: {}
+[24.259725] (-) TimerEvent: {}
+[24.360113] (-) TimerEvent: {}
+[24.460510] (-) TimerEvent: {}
+[24.560921] (-) TimerEvent: {}
+[24.661335] (-) TimerEvent: {}
+[24.761741] (-) TimerEvent: {}
+[24.862157] (-) TimerEvent: {}
+[24.962565] (-) TimerEvent: {}
+[25.062923] (-) TimerEvent: {}
+[25.163405] (-) TimerEvent: {}
+[25.263826] (-) TimerEvent: {}
+[25.364232] (-) TimerEvent: {}
+[25.464649] (-) TimerEvent: {}
+[25.565060] (-) TimerEvent: {}
+[25.665480] (-) TimerEvent: {}
+[25.765900] (-) TimerEvent: {}
+[25.866325] (-) TimerEvent: {}
+[25.966742] (-) TimerEvent: {}
+[26.067156] (-) TimerEvent: {}
+[26.167622] (-) TimerEvent: {}
+[26.268042] (-) TimerEvent: {}
+[26.368462] (-) TimerEvent: {}
+[26.468841] (-) TimerEvent: {}
+[26.569259] (-) TimerEvent: {}
+[26.669695] (-) TimerEvent: {}
+[26.770058] (-) TimerEvent: {}
+[26.870507] (-) TimerEvent: {}
+[26.970866] (-) TimerEvent: {}
+[27.071388] (-) TimerEvent: {}
+[27.171762] (-) TimerEvent: {}
+[27.272197] (-) TimerEvent: {}
+[27.372549] (-) TimerEvent: {}
+[27.472986] (-) TimerEvent: {}
+[27.573347] (-) TimerEvent: {}
+[27.673782] (-) TimerEvent: {}
+[27.774141] (-) TimerEvent: {}
+[27.874597] (-) TimerEvent: {}
+[27.975075] (-) TimerEvent: {}
+[28.075479] (-) TimerEvent: {}
+[28.175839] (-) TimerEvent: {}
+[28.276205] (-) TimerEvent: {}
+[28.376646] (-) TimerEvent: {}
+[28.477002] (-) TimerEvent: {}
+[28.577452] (-) TimerEvent: {}
+[28.677814] (-) TimerEvent: {}
+[28.778176] (-) TimerEvent: {}
+[28.878544] (-) TimerEvent: {}
+[28.981189] (-) TimerEvent: {}
+[29.081569] (-) TimerEvent: {}
+[29.181949] (-) TimerEvent: {}
+[29.282338] (-) TimerEvent: {}
+[29.382725] (-) TimerEvent: {}
+[29.483170] (-) TimerEvent: {}
+[29.583598] (-) TimerEvent: {}
+[29.683973] (-) TimerEvent: {}
+[29.784333] (-) TimerEvent: {}
+[29.884711] (-) TimerEvent: {}
+[29.985078] (-) TimerEvent: {}
+[30.085490] (-) TimerEvent: {}
+[30.185849] (-) TimerEvent: {}
+[30.286279] (-) TimerEvent: {}
+[30.386648] (-) TimerEvent: {}
+[30.487077] (-) TimerEvent: {}
+[30.587488] (-) TimerEvent: {}
+[30.687905] (-) TimerEvent: {}
+[30.788260] (-) TimerEvent: {}
+[30.888675] (-) TimerEvent: {}
+[30.989041] (-) TimerEvent: {}
+[31.089452] (-) TimerEvent: {}
+[31.189806] (-) TimerEvent: {}
+[31.290174] (-) TimerEvent: {}
+[31.390531] (-) TimerEvent: {}
+[31.490948] (-) TimerEvent: {}
+[31.591352] (-) TimerEvent: {}
+[31.691714] (-) TimerEvent: {}
+[31.792071] (-) TimerEvent: {}
+[31.893534] (-) TimerEvent: {}
+[31.993955] (-) TimerEvent: {}
+[32.094307] (-) TimerEvent: {}
+[32.194664] (-) TimerEvent: {}
+[32.295019] (-) TimerEvent: {}
+[32.395429] (-) TimerEvent: {}
+[32.495782] (-) TimerEvent: {}
+[32.596134] (-) TimerEvent: {}
+[32.696485] (-) TimerEvent: {}
+[32.796852] (-) TimerEvent: {}
+[32.897303] (-) TimerEvent: {}
+[32.997672] (-) TimerEvent: {}
+[33.098087] (-) TimerEvent: {}
+[33.198517] (-) TimerEvent: {}
+[33.298958] (-) TimerEvent: {}
+[33.399455] (-) TimerEvent: {}
+[33.499819] (-) TimerEvent: {}
+[33.600183] (-) TimerEvent: {}
+[33.606170] (servo_control) StdoutLine: {'line': b'[ 60%] Linking CXX executable scan_sequence_node\n'}
+[33.700361] (-) TimerEvent: {}
+[33.800746] (-) TimerEvent: {}
+[33.901185] (-) TimerEvent: {}
+[34.001651] (-) TimerEvent: {}
+[34.102112] (-) TimerEvent: {}
+[34.202560] (-) TimerEvent: {}
+[34.303003] (-) TimerEvent: {}
+[34.403450] (-) TimerEvent: {}
+[34.503803] (-) TimerEvent: {}
+[34.604149] (-) TimerEvent: {}
+[34.704500] (-) TimerEvent: {}
+[34.804859] (-) TimerEvent: {}
+[34.905258] (-) TimerEvent: {}
+[35.005676] (-) TimerEvent: {}
+[35.106029] (-) TimerEvent: {}
+[35.206461] (-) TimerEvent: {}
+[35.208615] (servo_control) StdoutLine: {'line': b'[ 60%] Built target scan_sequence_node\n'}
+[35.306740] (-) TimerEvent: {}
+[35.361701] (servo_control) StdoutLine: {'line': b'[ 80%] Built target lidar_pointcloud_node\n'}
+[35.406981] (-) TimerEvent: {}
+[35.500878] (servo_control) StdoutLine: {'line': b'[100%] Built target target_tracker_node\n'}
+[35.507145] (-) TimerEvent: {}
+[35.538651] (servo_control) CommandEnded: {'returncode': 0}
+[35.607427] (-) TimerEvent: {}
+[35.637752] (servo_control) JobProgress: {'identifier': 'servo_control', 'progress': 'install'}
+[35.639301] (servo_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/lidar_system/build/servo_control'], 'cwd': '/root/lidar_system/build/servo_control', 'env': OrderedDict([('HOSTNAME', 'ubuntu-desktop'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/fastdds.xml'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('PWD', '/root/lidar_system/build/servo_control'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[35.673685] (servo_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[35.674870] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/dynamic_tf_broadcaster\n'}
+[35.675894] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/lidar_pointcloud_node\n'}
+[35.677225] (servo_control) StdoutLine: {'line': b'-- Installing: /root/lidar_system/install/servo_control/lib/servo_control/scan_sequence_node\n'}
+[35.694295] (servo_control) StdoutLine: {'line': b'-- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/scan_sequence_node" to ""\n'}
+[35.695233] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/target_tracker_node\n'}
+[35.696316] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/mavros_tf_node\n'}
+[35.697713] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/pythonpath.sh\n'}
+[35.698139] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/pythonpath.dsv\n'}
+[35.698513] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control\n'}
+[35.698879] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/__init__.py\n'}
+[35.707539] (-) TimerEvent: {}
+[35.807861] (-) TimerEvent: {}
+[35.809672] (servo_control) StdoutLine: {'line': b"Listing '/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control'...\n"}
+[35.828854] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/servo_motor_node.py\n'}
+[35.830134] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/lidar_bbox_open3d.py\n'}
+[35.830982] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/ament_index/resource_index/package_run_dependencies/servo_control\n'}
+[35.831875] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/ament_index/resource_index/parent_prefix_path/servo_control\n'}
+[35.832881] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/ament_prefix_path.sh\n'}
+[35.833278] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/ament_prefix_path.dsv\n'}
+[35.833639] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/path.sh\n'}
+[35.834051] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/path.dsv\n'}
+[35.834397] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.bash\n'}
+[35.834755] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.sh\n'}
+[35.835119] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.zsh\n'}
+[35.835528] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.dsv\n'}
+[35.835884] (servo_control) StdoutLine: {'line': b'-- Installing: /root/lidar_system/install/servo_control/share/servo_control/package.dsv\n'}
+[35.836792] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/ament_index/resource_index/packages/servo_control\n'}
+[35.837499] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_controlConfig.cmake\n'}
+[35.849810] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_controlConfig-version.cmake\n'}
+[35.851240] (servo_control) StdoutLine: {'line': b'-- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/package.xml\n'}
+[35.851936] (servo_control) CommandEnded: {'returncode': 0}
+[35.908198] (-) TimerEvent: {}
+[36.010687] (-) TimerEvent: {}
+[36.058457] (servo_control) JobEnded: {'identifier': 'servo_control', 'rc': 0}
+[36.060970] (-) EventReactorShutdown: {}

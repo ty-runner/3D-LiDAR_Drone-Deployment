@@ -1,0 +1,11 @@
+[0.075s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[0.465s] [ 20%] Built target dynamic_tf_broadcaster
+[0.648s] [ 40%] Built target mavros_tf_node
+[0.880s] [ 50%] Linking CXX executable scan_sequence_node
+[18.032s] /usr/bin/ld: CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o: in function `rclcpp::Publisher<visualization_msgs::msg::Marker_<std::allocator<void> >, std::allocator<void> >::Publisher(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&, rclcpp::PublisherOptionsWithAllocator<std::allocator<void> > const&)':
+[18.032s] scan_sequence_node.cpp:(.text._ZN6rclcpp9PublisherIN18visualization_msgs3msg7Marker_ISaIvEEES4_EC2EPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSERKNS_29PublisherOptionsWithAllocatorIS4_EE[_ZN6rclcpp9PublisherIN18visualization_msgs3msg7Marker_ISaIvEEES4_EC5EPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSERKNS_29PublisherOptionsWithAllocatorIS4_EE]+0x3c): undefined reference to `rosidl_message_type_support_t const* rosidl_typesupport_cpp::get_message_type_support_handle<visualization_msgs::msg::Marker_<std::allocator<void> > >()'
+[18.034s] collect2: error: ld returned 1 exit status
+[18.035s] make[2]: *** [CMakeFiles/scan_sequence_node.dir/build.make:218: scan_sequence_node] Error 1
+[18.036s] make[1]: *** [CMakeFiles/Makefile2:248: CMakeFiles/scan_sequence_node.dir/all] Error 2
+[18.037s] make: *** [Makefile:141: all] Error 2
+[18.042s] Invoked command in '/root/lidar_system/build/servo_control' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4

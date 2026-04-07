@@ -1,0 +1,10 @@
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp: In constructor ‘ScanSequenceNode::ScanSequenceNode()’:
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:668:16: warning: ‘ScanSequenceNode::tilt_settle_start_’ will be initialized after [-Wreorder]
+  668 |   rclcpp::Time tilt_settle_start_;
+      |                ^~~~~~~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:648:16: warning:   ‘rclcpp::Time ScanSequenceNode::last_target_time_’ [-Wreorder]
+  648 |   rclcpp::Time last_target_time_;
+      |                ^~~~~~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/scan_sequence_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+   14 |   ScanSequenceNode()
+      |   ^~~~~~~~~~~~~~~~

@@ -36,7 +36,7 @@ class LidarBBoxOpen3DV2(Node):
         self.declare_parameter('pointcloud_topic', '/lidar_points')
         self.declare_parameter('frame_id_override', '')
 
-        self.declare_parameter('range_min', 0.1)
+        self.declare_parameter('range_min', 0.3)
         self.declare_parameter('range_max', 30.0)
         self.declare_parameter('z_min', -2.0)
         self.declare_parameter('z_max', 3.0)
@@ -45,7 +45,7 @@ class LidarBBoxOpen3DV2(Node):
         self.declare_parameter('voxel_size', 0.05)
 
         # MUCH tighter clustering
-        self.declare_parameter('cluster_eps', 0.12)
+        self.declare_parameter('cluster_eps', 0.25)
         self.declare_parameter('min_cluster_points', 10)
 
         self.declare_parameter('outlier_nb_neighbors', 20)
@@ -89,7 +89,7 @@ class LidarBBoxOpen3DV2(Node):
         self.marker_pub = self.create_publisher(MarkerArray, 'lidar_bboxes', 10)
         self.centroid_pub = self.create_publisher(PoseArray, 'lidar_detections_centroids', 10)
 
-        self.buffer = deque(maxlen=50)
+        self.buffer = deque(maxlen=120)
 
         self.get_logger().info('lidar_bbox_open3d_v2 node started')
 
@@ -106,11 +106,10 @@ class LidarBBoxOpen3DV2(Node):
 
         # -------- ROI filtering --------
         x, y, z = pts[:, 0], pts[:, 1], pts[:, 2]
-        r = np.sqrt(x*x + y*y)
+        r = np.sqrt(x*x + y*y + z*z)
 
         mask = (
-            (r >= self.r_min) & (r <= self.r_max) &
-            (z >= self.z_min) & (z <= self.z_max)
+            (r >= self.r_min) & (r <= self.r_max)
         )
 
         pts = pts[mask]
@@ -128,33 +127,33 @@ class LidarBBoxOpen3DV2(Node):
 
 
         # Downsample
-        pc = pc.voxel_down_sample(self.voxel_size)
+        #pc = pc.voxel_down_sample(self.voxel_size)
 
-        if len(pc.points) < self.min_pts:
-            return
+        #if len(pc.points) < self.min_pts:
+        #    return
 
 
         # Outlier removal
-        pc, _ = pc.remove_statistical_outlier(
-            nb_neighbors=self.nb_neighbors,
-            std_ratio=self.std_ratio
-        )
+        #pc, _ = pc.remove_statistical_outlier(
+        #    nb_neighbors=self.nb_neighbors,
+        #    std_ratio=self.std_ratio
+        #)
 
-        if len(pc.points) < self.min_pts:
-            return
+        #if len(pc.points) < self.min_pts:
+        #    return
 
 
         # -------- Ground removal --------
-        if self.enable_plane:
-            try:
-                plane_model, inliers = pc.segment_plane(
-                    distance_threshold=self.plane_dist,
-                    ransac_n=self.plane_ransac_n,
-                    num_iterations=self.plane_iters
-                )
-                pc = pc.select_by_index(inliers, invert=True)
-            except:
-                pass
+        #if self.enable_plane:
+        #    try:
+        #        plane_model, inliers = pc.segment_plane(
+        #            distance_threshold=self.plane_dist,
+        #            ransac_n=self.plane_ransac_n,
+        #            num_iterations=self.plane_iters
+        #        )
+        #        pc = pc.select_by_index(inliers, invert=True)
+        #    except:
+        #        pass
         
 
         pts_clean = np.asarray(pc.points)
@@ -200,15 +199,16 @@ class LidarBBoxOpen3DV2(Node):
             pc_part = o3d.geometry.PointCloud()
             pc_part.points = o3d.utility.Vector3dVector(cluster_pts.astype(np.float64))
 
-            obb = pc_part.get_oriented_bounding_box()
+            try:
+                obb = pc_part.get_oriented_bounding_box()
+            except RuntimeError:
+                continue
 
             center = obb.center
             extent = obb.extent
             R = obb.R
 
             width, depth, height = extent
-
-            self.get_logger().info(f"Width: {width}, depth: {depth}, height: {height}")
 
             # -------- Human size filtering --------
             if not (

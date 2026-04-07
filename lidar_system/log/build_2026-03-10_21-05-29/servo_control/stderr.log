@@ -1,0 +1,10 @@
+/root/lidar_system/servo_control/src/height_scanner_node.cpp: In constructor ‘HeightScannerNode::HeightScannerNode()’:
+/root/lidar_system/servo_control/src/height_scanner_node.cpp:334:10: warning: ‘HeightScannerNode::locked_pan_’ will be initialized after [-Wreorder]
+  334 |   double locked_pan_;
+      |          ^~~~~~~~~~~
+/root/lidar_system/servo_control/src/height_scanner_node.cpp:323:16: warning:   ‘rclcpp::Time HeightScannerNode::settle_start_’ [-Wreorder]
+  323 |   rclcpp::Time settle_start_;
+      |                ^~~~~~~~~~~~~
+/root/lidar_system/servo_control/src/height_scanner_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+   14 |   HeightScannerNode()
+      |   ^~~~~~~~~~~~~~~~~

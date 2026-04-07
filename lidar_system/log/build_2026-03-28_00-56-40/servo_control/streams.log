@@ -1,0 +1,83 @@
+[0.104s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[0.519s] [  2%] Built target servo_control__cpp
+[0.596s] [  8%] Built target servo_control__rosidl_generator_c
+[0.760s] [ 13%] Built target dynamic_tf_broadcaster
+[0.779s] [ 17%] Built target target_tracker_node
+[0.937s] [ 22%] Built target lidar_pointcloud_node
+[0.943s] [ 26%] Built target scan_sequence_node
+[1.030s] [ 33%] Built target servo_control__rosidl_typesupport_cpp
+[1.114s] [ 37%] Built target mavros_tf_node
+[1.158s] [ 44%] Built target servo_control__rosidl_typesupport_introspection_c
+[1.199s] [ 51%] Built target servo_control__rosidl_typesupport_introspection_cpp
+[1.220s] [ 57%] Built target servo_control__rosidl_typesupport_fastrtps_cpp
+[1.313s] [ 64%] Built target servo_control__rosidl_typesupport_c
+[1.486s] [ 71%] Built target servo_control__rosidl_typesupport_fastrtps_c
+[1.747s] [ 71%] Built target servo_control
+[1.748s] [ 73%] Built target servo_control__py
+[1.794s] Scanning dependencies of target px4_takeoff_manager_node
+[1.845s] [ 77%] Built target local_dimensions_node
+[1.885s] [ 82%] Built target servo_control__python
+[1.889s] [ 84%] Building CXX object CMakeFiles/px4_takeoff_manager_node.dir/src/px4_takeoff_manager_node.cpp.o
+[2.034s] [ 88%] Built target servo_control__rosidl_typesupport_fastrtps_c__pyext
+[2.093s] [ 93%] Built target servo_control__rosidl_typesupport_c__pyext
+[2.177s] [ 97%] Built target servo_control__rosidl_typesupport_introspection_c__pyext
+[10.705s] /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp: In constructor ‘Px4TakeoffManagerNode::Px4TakeoffManagerNode()’:
+[10.706s] /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp:104:24: error: no match for ‘operator=’ (operand types are ‘rclcpp::TimerBase::SharedPtr’ {aka ‘std::shared_ptr<rclcpp::TimerBase>’} and ‘rclcpp::Time’)
+[10.706s]   104 |     timer_ = this->now();
+[10.707s]       |                        ^
+[10.707s] In file included from /usr/include/c++/9/memory:81,
+[10.707s]                  from /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp:3:
+[10.708s] /usr/include/c++/9/bits/shared_ptr.h:309:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::TimerBase]’
+[10.708s]   309 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+[10.709s]       |                   ^~~~~~~~
+[10.709s] /usr/include/c++/9/bits/shared_ptr.h:309:29: note:   no known conversion for argument 1 from ‘rclcpp::Time’ to ‘const std::shared_ptr<rclcpp::TimerBase>&’
+[10.710s]   309 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+[10.719s]       |                             ^~~~~~~~~~~~~~~~~
+[10.720s] /usr/include/c++/9/bits/shared_ptr.h:313:2: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = rclcpp::TimerBase]’
+[10.722s]   313 |  operator=(const shared_ptr<_Yp>& __r) noexcept
+[10.723s]       |  ^~~~~~~~
+[10.724s] /usr/include/c++/9/bits/shared_ptr.h:313:2: note:   template argument deduction/substitution failed:
+[10.726s] /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp:104:24: note:   ‘rclcpp::Time’ is not derived from ‘const std::shared_ptr<_Tp>’
+[10.727s]   104 |     timer_ = this->now();
+[10.729s]       |                        ^
+[10.730s] In file included from /usr/include/c++/9/memory:81,
+[10.731s]                  from /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp:3:
+[10.732s] /usr/include/c++/9/bits/shared_ptr.h:324:2: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = rclcpp::TimerBase]’
+[10.732s]   324 |  operator=(auto_ptr<_Yp>&& __r)
+[10.738s]       |  ^~~~~~~~
+[10.739s] /usr/include/c++/9/bits/shared_ptr.h:324:2: note:   template argument deduction/substitution failed:
+[10.739s] /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp:104:24: note:   ‘rclcpp::Time’ is not derived from ‘std::auto_ptr<_Up>’
+[10.740s]   104 |     timer_ = this->now();
+[10.740s]       |                        ^
+[10.741s] In file included from /usr/include/c++/9/memory:81,
+[10.742s]                  from /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp:3:
+[10.743s] /usr/include/c++/9/bits/shared_ptr.h:333:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::TimerBase]’
+[10.743s]   333 |       operator=(shared_ptr&& __r) noexcept
+[10.744s]       |       ^~~~~~~~
+[10.744s] /usr/include/c++/9/bits/shared_ptr.h:333:30: note:   no known conversion for argument 1 from ‘rclcpp::Time’ to ‘std::shared_ptr<rclcpp::TimerBase>&&’
+[10.745s]   333 |       operator=(shared_ptr&& __r) noexcept
+[10.745s]       |                 ~~~~~~~~~~~~~^~~
+[10.745s] /usr/include/c++/9/bits/shared_ptr.h:341:2: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = rclcpp::TimerBase]’
+[10.746s]   341 |  operator=(shared_ptr<_Yp>&& __r) noexcept
+[10.746s]       |  ^~~~~~~~
+[10.747s] /usr/include/c++/9/bits/shared_ptr.h:341:2: note:   template argument deduction/substitution failed:
+[10.747s] /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp:104:24: note:   ‘rclcpp::Time’ is not derived from ‘std::shared_ptr<_Tp>’
+[10.747s]   104 |     timer_ = this->now();
+[10.748s]       |                        ^
+[10.748s] In file included from /usr/include/c++/9/memory:81,
+[10.749s]                  from /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp:3:
+[10.749s] /usr/include/c++/9/bits/shared_ptr.h:349:2: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = rclcpp::TimerBase]’
+[10.749s]   349 |  operator=(unique_ptr<_Yp, _Del>&& __r)
+[10.750s]       |  ^~~~~~~~
+[10.750s] /usr/include/c++/9/bits/shared_ptr.h:349:2: note:   template argument deduction/substitution failed:
+[10.750s] /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp:104:24: note:   ‘rclcpp::Time’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+[10.751s]   104 |     timer_ = this->now();
+[10.751s]       |                        ^
+[10.752s] /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp:107:61: error: expected ‘;’ before ‘)’ token
+[10.752s]   107 |       std::bind(&Px4TakeoffManagerNode::timerCallback, this));
+[10.752s]       |                                                             ^
+[10.753s]       |                                                             ;
+[23.761s] make[2]: *** [CMakeFiles/px4_takeoff_manager_node.dir/build.make:63: CMakeFiles/px4_takeoff_manager_node.dir/src/px4_takeoff_manager_node.cpp.o] Error 1
+[23.776s] make[1]: *** [CMakeFiles/Makefile2:697: CMakeFiles/px4_takeoff_manager_node.dir/all] Error 2
+[23.777s] make: *** [Makefile:141: all] Error 2
+[23.778s] Invoked command in '/root/lidar_system/build/servo_control' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4

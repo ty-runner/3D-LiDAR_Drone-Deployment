@@ -1,0 +1,285 @@
+[0.078s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[0.215s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.327s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.329s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.377s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.570s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.585s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.398s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.627s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.632s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.308s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[3.463s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[3.792s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[5.392s] -- Found laser_geometry: 2.2.0 (/opt/ros/foxy/share/laser_geometry/cmake)
+[5.411s] -- Found tf2_sensor_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_sensor_msgs/cmake)
+[5.492s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[5.843s] -- Found octomap_msgs: 2.0.0 (/opt/ros/foxy/share/octomap_msgs/cmake)
+[6.160s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[6.287s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[6.839s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[7.556s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.592s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.684s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[7.703s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[7.829s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[7.830s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[7.830s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[7.831s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[7.913s] -- Found PythonExtra: .so  
+[8.059s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[8.122s] -- Configuring done
+[8.450s] -- Generating done
+[8.467s] -- Build files have been written to: /root/lidar_system/build/servo_control
+[8.601s] Scanning dependencies of target mavros_tf_node
+[8.617s] Scanning dependencies of target servo_control__cpp
+[8.626s] Scanning dependencies of target lidar_pointcloud_node
+[8.670s] [  2%] Building CXX object CMakeFiles/mavros_tf_node.dir/src/mavros_tf_node.cpp.o
+[8.671s] [  4%] Generating C++ code for ROS interfaces
+[8.682s] Scanning dependencies of target scan_sequence_node
+[8.752s] [  6%] Building CXX object CMakeFiles/lidar_pointcloud_node.dir/src/lidar_pointcloud_node.cpp.o
+[8.776s] [  9%] Building CXX object CMakeFiles/scan_sequence_node.dir/src/scan_sequence_node.cpp.o
+[10.463s] [  9%] Built target servo_control__cpp
+[10.531s] [ 11%] Generating C code for ROS interfaces
+[12.526s] Scanning dependencies of target servo_control__rosidl_generator_c
+[12.617s] [ 13%] Building C object CMakeFiles/servo_control__rosidl_generator_c.dir/rosidl_generator_c/servo_control/srv/detail/get_local_dimensions__functions.c.o
+[13.278s] [ 16%] Linking C shared library libservo_control__rosidl_generator_c.so
+[13.562s] [ 16%] Built target servo_control__rosidl_generator_c
+[13.624s] [ 18%] Generating C++ introspection for ROS interfaces
+[15.176s] Scanning dependencies of target servo_control__rosidl_typesupport_introspection_cpp
+[15.250s] [ 20%] Building CXX object CMakeFiles/servo_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_control/srv/detail/get_local_dimensions__type_support.cpp.o
+[16.902s] [ 23%] Linking CXX shared library libservo_control__rosidl_typesupport_introspection_cpp.so
+[17.127s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp: In constructor ‘ScanSequenceNode::ScanSequenceNode()’:
+[17.128s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:668:16: warning: ‘ScanSequenceNode::tilt_settle_start_’ will be initialized after [-Wreorder]
+[17.128s]   668 |   rclcpp::Time tilt_settle_start_;
+[17.129s]       |                ^~~~~~~~~~~~~~~~~~
+[17.130s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:645:16: warning:   ‘rclcpp::Time ScanSequenceNode::last_target_time_’ [-Wreorder]
+[17.131s]   645 |   rclcpp::Time last_target_time_;
+[17.132s]       |                ^~~~~~~~~~~~~~~~~
+[17.133s] /root/lidar_system/servo_control/src/scan_sequence_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+[17.134s]    14 |   ScanSequenceNode()
+[17.134s]       |   ^~~~~~~~~~~~~~~~
+[17.217s] [ 23%] Built target servo_control__rosidl_typesupport_introspection_cpp
+[17.264s] [ 25%] Generating C introspection for ROS interfaces
+[18.927s] Scanning dependencies of target servo_control__rosidl_typesupport_introspection_c
+[18.994s] [ 27%] Building C object CMakeFiles/servo_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_control/srv/detail/get_local_dimensions__type_support.c.o
+[19.219s] [ 30%] Linking C shared library libservo_control__rosidl_typesupport_introspection_c.so
+[19.400s] [ 30%] Built target servo_control__rosidl_typesupport_introspection_c
+[19.523s] Scanning dependencies of target target_tracker_node
+[19.677s] [ 32%] Building CXX object CMakeFiles/target_tracker_node.dir/src/target_tracker_node.cpp.o
+[27.457s] /root/lidar_system/servo_control/src/target_tracker_node.cpp: In constructor ‘TargetTrackerNode::TargetTrackerNode()’:
+[27.458s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:327:7: warning: ‘TargetTrackerNode::scan_count_’ will be initialized after [-Wreorder]
+[27.458s]   327 |   int scan_count_;
+[27.459s]       |       ^~~~~~~~~~~
+[27.459s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:326:8: warning:   ‘bool TargetTrackerNode::capture_next_’ [-Wreorder]
+[27.460s]   326 |   bool capture_next_;
+[27.460s]       |        ^~~~~~~~~~~~~
+[27.461s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+[27.461s]    14 |   TargetTrackerNode()
+[27.461s]       |   ^~~~~~~~~~~~~~~~~
+[27.462s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:326:8: warning: ‘TargetTrackerNode::capture_next_’ will be initialized after [-Wreorder]
+[27.462s]   326 |   bool capture_next_;
+[27.463s]       |        ^~~~~~~~~~~~~
+[27.463s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:325:8: warning:   ‘bool TargetTrackerNode::bg_valid_’ [-Wreorder]
+[27.464s]   325 |   bool bg_valid_;
+[27.464s]       |        ^~~~~~~~~
+[27.465s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+[27.465s]    14 |   TargetTrackerNode()
+[27.465s]       |   ^~~~~~~~~~~~~~~~~
+[39.211s] [ 34%] Linking CXX executable mavros_tf_node
+[42.146s] [ 34%] Built target mavros_tf_node
+[42.350s] Scanning dependencies of target dynamic_tf_broadcaster
+[42.493s] [ 37%] Building CXX object CMakeFiles/dynamic_tf_broadcaster.dir/src/dynamic_tf_broadcaster.cpp.o
+[42.618s] [ 39%] Linking CXX executable lidar_pointcloud_node
+[44.369s] [ 39%] Built target lidar_pointcloud_node
+[64.536s] [ 41%] Linking CXX executable target_tracker_node
+[66.919s] [ 41%] Built target target_tracker_node
+[67.202s] [ 44%] Linking CXX executable scan_sequence_node
+[69.778s] [ 44%] Built target scan_sequence_node
+[76.468s] [ 46%] Linking CXX executable dynamic_tf_broadcaster
+[77.952s] [ 46%] Built target dynamic_tf_broadcaster
+[78.030s] [ 48%] Generating C type support dispatch for ROS interfaces
+[79.478s] Scanning dependencies of target servo_control__rosidl_typesupport_c
+[79.526s] [ 51%] Building CXX object CMakeFiles/servo_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_control/srv/get_local_dimensions__type_support.cpp.o
+[79.752s] [ 53%] Linking CXX shared library libservo_control__rosidl_typesupport_c.so
+[79.943s] [ 53%] Built target servo_control__rosidl_typesupport_c
+[80.002s] [ 55%] Generating C++ type support for eProsima Fast-RTPS
+[81.488s] Scanning dependencies of target servo_control__rosidl_typesupport_fastrtps_cpp
+[81.564s] [ 58%] Building CXX object CMakeFiles/servo_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_control/srv/detail/dds_fastrtps/get_local_dimensions__type_support.cpp.o
+[84.098s] [ 60%] Linking CXX shared library libservo_control__rosidl_typesupport_fastrtps_cpp.so
+[84.486s] [ 60%] Built target servo_control__rosidl_typesupport_fastrtps_cpp
+[84.536s] [ 62%] Generating C++ type support dispatch for ROS interfaces
+[85.866s] Scanning dependencies of target servo_control__rosidl_typesupport_cpp
+[85.930s] [ 65%] Building CXX object CMakeFiles/servo_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_control/srv/get_local_dimensions__type_support.cpp.o
+[87.508s] [ 67%] Linking CXX shared library libservo_control__rosidl_typesupport_cpp.so
+[87.672s] [ 67%] Built target servo_control__rosidl_typesupport_cpp
+[87.721s] [ 69%] Generating C type support for eProsima Fast-RTPS
+[89.242s] Scanning dependencies of target servo_control__rosidl_typesupport_fastrtps_c
+[89.292s] [ 72%] Building CXX object CMakeFiles/servo_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_control/srv/detail/get_local_dimensions__type_support_c.cpp.o
+[91.277s] [ 74%] Linking CXX shared library libservo_control__rosidl_typesupport_fastrtps_c.so
+[91.598s] [ 74%] Built target servo_control__rosidl_typesupport_fastrtps_c
+[91.640s] Scanning dependencies of target servo_control
+[91.688s] [ 74%] Built target servo_control
+[91.732s] Scanning dependencies of target servo_control__py
+[91.778s] [ 76%] Generating Python code for ROS interfaces
+[94.665s] [ 76%] Built target servo_control__py
+[94.837s] Scanning dependencies of target local_dimensions_node
+[94.903s] [ 79%] Building CXX object CMakeFiles/local_dimensions_node.dir/src/local_dimensions_node.cpp.o
+[126.507s] [ 81%] Linking CXX executable local_dimensions_node
+[127.850s] [ 81%] Built target local_dimensions_node
+[128.000s] Scanning dependencies of target servo_control__python
+[128.045s] [ 83%] Building C object CMakeFiles/servo_control__python.dir/rosidl_generator_py/servo_control/srv/_get_local_dimensions_s.c.o
+[128.866s] [ 86%] Linking C shared library rosidl_generator_py/servo_control/libservo_control__python.so
+[129.058s] [ 86%] Built target servo_control__python
+[129.132s] Scanning dependencies of target servo_control__rosidl_typesupport_c__pyext
+[129.181s] [ 88%] Building C object CMakeFiles/servo_control__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/servo_control/_servo_control_s.ep.rosidl_typesupport_c.c.o
+[129.638s] [ 90%] Linking C shared library rosidl_generator_py/servo_control/servo_control_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[129.791s] [ 90%] Built target servo_control__rosidl_typesupport_c__pyext
+[129.867s] Scanning dependencies of target servo_control__rosidl_typesupport_fastrtps_c__pyext
+[129.922s] [ 93%] Building C object CMakeFiles/servo_control__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/servo_control/_servo_control_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[130.335s] [ 95%] Linking CXX shared library rosidl_generator_py/servo_control/servo_control_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[130.599s] [ 95%] Built target servo_control__rosidl_typesupport_fastrtps_c__pyext
+[130.673s] Scanning dependencies of target servo_control__rosidl_typesupport_introspection_c__pyext
+[130.721s] [ 97%] Building C object CMakeFiles/servo_control__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/servo_control/_servo_control_s.ep.rosidl_typesupport_introspection_c.c.o
+[131.123s] [100%] Linking C shared library rosidl_generator_py/servo_control/servo_control_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[131.269s] [100%] Built target servo_control__rosidl_typesupport_introspection_c__pyext
+[131.330s] Invoked command in '/root/lidar_system/build/servo_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[131.561s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/lidar_system/build/servo_control
+[131.604s] -- Install configuration: ""
+[131.606s] -- Installing: /root/lidar_system/install/servo_control/share/ament_index/resource_index/rosidl_interfaces/servo_control
+[131.607s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control
+[131.608s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/msg
+[131.609s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/msg/rosidl_generator_c__visibility_control.h
+[131.611s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv
+[131.612s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/get_local_dimensions.h
+[131.612s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail
+[131.613s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__struct.h
+[131.613s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__type_support.h
+[131.614s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__functions.h
+[131.615s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__functions.c
+[131.616s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/environment/library_path.sh
+[131.617s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/environment/library_path.dsv
+[131.618s] -- Installing: /root/lidar_system/install/servo_control/lib/libservo_control__rosidl_generator_c.so
+[131.620s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/libservo_control__rosidl_generator_c.so" to ""
+[131.622s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control
+[131.623s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/msg
+[131.627s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[131.628s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/srv
+[131.628s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/srv/detail
+[131.629s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__rosidl_typesupport_fastrtps_c.h
+[131.629s] -- Installing: /root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_fastrtps_c.so
+[131.630s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_fastrtps_c.so" to ""
+[131.630s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control
+[131.631s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/msg
+[131.631s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[131.632s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/srv
+[131.632s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/srv/detail
+[131.633s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__rosidl_typesupport_fastrtps_cpp.hpp
+[131.633s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/dds_fastrtps
+[131.635s] -- Installing: /root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_fastrtps_cpp.so
+[131.635s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_fastrtps_cpp.so" to ""
+[131.636s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control
+[131.636s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/msg
+[131.637s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[131.637s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/srv
+[131.638s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/srv/detail
+[131.638s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__rosidl_typesupport_introspection_c.h
+[131.639s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__type_support.c
+[131.640s] -- Installing: /root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_introspection_c.so
+[131.641s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_introspection_c.so" to ""
+[131.641s] -- Installing: /root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_c.so
+[131.643s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_c.so" to ""
+[131.643s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control
+[131.644s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/msg
+[131.644s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/msg/rosidl_generator_cpp__visibility_control.hpp
+[131.645s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/srv
+[131.645s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/srv/detail
+[131.646s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__traits.hpp
+[131.646s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__struct.hpp
+[131.648s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__type_support.hpp
+[131.648s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__builder.hpp
+[131.649s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/get_local_dimensions.hpp
+[131.649s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control
+[131.650s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/srv
+[131.650s] -- Up-to-date: /root/lidar_system/install/servo_control/include/servo_control/srv/detail
+[131.650s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__type_support.cpp
+[131.651s] -- Installing: /root/lidar_system/install/servo_control/include/servo_control/srv/detail/get_local_dimensions__rosidl_typesupport_introspection_cpp.hpp
+[131.651s] -- Installing: /root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_introspection_cpp.so
+[131.652s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_introspection_cpp.so" to ""
+[131.652s] -- Installing: /root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_cpp.so
+[131.654s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/libservo_control__rosidl_typesupport_cpp.so" to ""
+[131.654s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/pythonpath.sh
+[131.655s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/environment/pythonpath.dsv
+[131.658s] -- Installing: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/__init__.py
+[131.802s] Compiling '/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/__init__.py'...
+[131.826s] -- Installing: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/srv
+[131.827s] -- Installing: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/srv/_get_local_dimensions_s.c
+[131.828s] -- Installing: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/srv/__init__.py
+[131.828s] -- Installing: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/srv/_get_local_dimensions.py
+[131.829s] -- Installing: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/servo_control_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[131.831s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/servo_control_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""
+[131.832s] -- Installing: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/servo_control_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[131.834s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/servo_control_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""
+[131.835s] -- Installing: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/servo_control_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[131.837s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/servo_control_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""
+[131.837s] -- Installing: /root/lidar_system/install/servo_control/lib/libservo_control__python.so
+[131.838s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/libservo_control__python.so" to ""
+[131.839s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/srv/GetLocalDimensions.idl
+[131.840s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/srv/GetLocalDimensions.srv
+[131.842s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/srv/GetLocalDimensions_Request.msg
+[131.843s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/srv/GetLocalDimensions_Response.msg
+[131.848s] -- Installing: /root/lidar_system/install/servo_control/lib/servo_control/dynamic_tf_broadcaster
+[131.860s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/dynamic_tf_broadcaster" to ""
+[131.863s] -- Installing: /root/lidar_system/install/servo_control/lib/servo_control/lidar_pointcloud_node
+[131.873s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/lidar_pointcloud_node" to ""
+[131.876s] -- Installing: /root/lidar_system/install/servo_control/lib/servo_control/scan_sequence_node
+[131.899s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/scan_sequence_node" to ""
+[131.901s] -- Installing: /root/lidar_system/install/servo_control/lib/servo_control/target_tracker_node
+[131.916s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/target_tracker_node" to ""
+[131.919s] -- Installing: /root/lidar_system/install/servo_control/lib/servo_control/mavros_tf_node
+[131.931s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/mavros_tf_node" to ""
+[131.932s] -- Installing: /root/lidar_system/install/servo_control/lib/servo_control/local_dimensions_node
+[131.941s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/local_dimensions_node" to ""
+[131.942s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control
+[131.950s] -- Installing: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/__init__.py
+[132.097s] Listing '/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control'...
+[132.097s] Compiling '/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/__init__.py'...
+[132.098s] Listing '/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/srv'...
+[132.098s] Compiling '/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/srv/__init__.py'...
+[132.098s] Compiling '/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/srv/_get_local_dimensions.py'...
+[132.124s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/servo_motor_node.py
+[132.126s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/lidar_bbox_open3d.py
+[132.127s] -- Installing: /root/lidar_system/install/servo_control/share/ament_index/resource_index/package_run_dependencies/servo_control
+[132.129s] -- Up-to-date: /root/lidar_system/install/servo_control/share/ament_index/resource_index/parent_prefix_path/servo_control
+[132.130s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/ament_prefix_path.sh
+[132.131s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/environment/ament_prefix_path.dsv
+[132.132s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/path.sh
+[132.133s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/environment/path.dsv
+[132.134s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.bash
+[132.134s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/local_setup.sh
+[132.137s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.zsh
+[132.137s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/local_setup.dsv
+[132.138s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/package.dsv
+[132.139s] -- Up-to-date: /root/lidar_system/install/servo_control/share/ament_index/resource_index/packages/servo_control
+[132.143s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_control__rosidl_generator_cExport.cmake
+[132.148s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_control__rosidl_generator_cExport-noconfig.cmake
+[132.149s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_control__rosidl_typesupport_introspection_cExport.cmake
+[132.151s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_control__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[132.153s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_control__rosidl_typesupport_cExport.cmake
+[132.154s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_control__rosidl_typesupport_cExport-noconfig.cmake
+[132.156s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_control__rosidl_generator_cppExport.cmake
+[132.157s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_control__rosidl_typesupport_introspection_cppExport.cmake
+[132.158s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_control__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[132.159s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_control__rosidl_typesupport_cppExport.cmake
+[132.160s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_control__rosidl_typesupport_cppExport-noconfig.cmake
+[132.161s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/rosidl_cmake-extras.cmake
+[132.163s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/ament_cmake_export_dependencies-extras.cmake
+[132.164s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/ament_cmake_export_libraries-extras.cmake
+[132.165s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/ament_cmake_export_targets-extras.cmake
+[132.167s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/ament_cmake_export_include_directories-extras.cmake
+[132.169s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[132.170s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[132.172s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_controlConfig.cmake
+[132.176s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_controlConfig-version.cmake
+[132.176s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/package.xml
+[132.197s] Invoked command in '/root/lidar_system/build/servo_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/lidar_system/build/servo_control

@@ -1,0 +1,32 @@
+[0.086s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[0.401s] [  6%] Built target servo_control__rosidl_generator_c
+[0.436s] [  8%] Built target servo_control__cpp
+[0.502s] [ 13%] Built target dynamic_tf_broadcaster
+[0.518s] [ 17%] Built target target_tracker_node
+[0.630s] [ 22%] Built target scan_sequence_node
+[0.655s] [ 26%] Built target lidar_pointcloud_node
+[0.679s] [ 33%] Built target servo_control__rosidl_typesupport_cpp
+[0.768s] [ 37%] Built target mavros_tf_node
+[0.778s] [ 44%] Built target servo_control__rosidl_typesupport_fastrtps_cpp
+[0.780s] [ 51%] Built target servo_control__rosidl_typesupport_introspection_cpp
+[0.792s] [ 57%] Built target servo_control__rosidl_typesupport_introspection_c
+[0.872s] [ 64%] Built target servo_control__rosidl_typesupport_c
+[0.954s] [ 71%] Built target servo_control__rosidl_typesupport_fastrtps_c
+[0.995s] [ 71%] Built target servo_control
+[1.126s] [ 73%] Built target servo_control__py
+[1.127s] Scanning dependencies of target px4_takeoff_manager_node
+[1.183s] [ 77%] Built target local_dimensions_node
+[1.216s] [ 80%] Building CXX object CMakeFiles/px4_takeoff_manager_node.dir/src/px4_takeoff_manager_node.cpp.o
+[1.259s] [ 84%] Built target servo_control__python
+[1.400s] [ 88%] Built target servo_control__rosidl_typesupport_fastrtps_c__pyext
+[1.410s] [ 93%] Built target servo_control__rosidl_typesupport_introspection_c__pyext
+[1.458s] [ 97%] Built target servo_control__rosidl_typesupport_c__pyext
+[7.615s] /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp: In constructor ‘Px4TakeoffManagerNode::Px4TakeoffManagerNode()’:
+[7.615s] /root/lidar_system/servo_control/src/px4_takeoff_manager_node.cpp:109:61: error: expected ‘;’ before ‘)’ token
+[7.616s]   109 |       std::bind(&Px4TakeoffManagerNode::timerCallback, this));
+[7.616s]       |                                                             ^
+[7.616s]       |                                                             ;
+[17.824s] make[2]: *** [CMakeFiles/px4_takeoff_manager_node.dir/build.make:63: CMakeFiles/px4_takeoff_manager_node.dir/src/px4_takeoff_manager_node.cpp.o] Error 1
+[17.825s] make[1]: *** [CMakeFiles/Makefile2:697: CMakeFiles/px4_takeoff_manager_node.dir/all] Error 2
+[17.826s] make: *** [Makefile:141: all] Error 2
+[17.831s] Invoked command in '/root/lidar_system/build/servo_control' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4

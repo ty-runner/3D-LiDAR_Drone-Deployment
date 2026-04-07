@@ -1,0 +1,60 @@
+[0.066s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[0.443s] [ 20%] Built target dynamic_tf_broadcaster
+[0.624s] [ 40%] Built target mavros_tf_node
+[0.829s] [ 60%] Built target scan_sequence_node
+[1.036s] [ 80%] Built target lidar_pointcloud_node
+[1.185s] Scanning dependencies of target target_tracker_node
+[1.306s] [ 90%] Building CXX object CMakeFiles/target_tracker_node.dir/src/target_tracker_node.cpp.o
+[8.503s] /root/lidar_system/servo_control/src/target_tracker_node.cpp: In constructor ‘TargetTrackerNode::TargetTrackerNode()’:
+[8.504s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:290:7: warning: ‘TargetTrackerNode::scan_count_’ will be initialized after [-Wreorder]
+[8.505s]   290 |   int scan_count_;
+[8.506s]       |       ^~~~~~~~~~~
+[8.506s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:289:8: warning:   ‘bool TargetTrackerNode::capture_next_’ [-Wreorder]
+[8.506s]   289 |   bool capture_next_;
+[8.507s]       |        ^~~~~~~~~~~~~
+[8.507s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+[8.507s]    14 |   TargetTrackerNode()
+[8.508s]       |   ^~~~~~~~~~~~~~~~~
+[8.508s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:289:8: warning: ‘TargetTrackerNode::capture_next_’ will be initialized after [-Wreorder]
+[8.509s]   289 |   bool capture_next_;
+[8.509s]       |        ^~~~~~~~~~~~~
+[8.509s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:288:8: warning:   ‘bool TargetTrackerNode::bg_valid_’ [-Wreorder]
+[8.510s]   288 |   bool bg_valid_;
+[8.510s]       |        ^~~~~~~~~
+[8.510s] /root/lidar_system/servo_control/src/target_tracker_node.cpp:14:3: warning:   when initialized here [-Wreorder]
+[8.511s]    14 |   TargetTrackerNode()
+[8.511s]       |   ^~~~~~~~~~~~~~~~~
+[33.329s] [100%] Linking CXX executable target_tracker_node
+[34.822s] [100%] Built target target_tracker_node
+[34.860s] Invoked command in '/root/lidar_system/build/servo_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/lidar_system/build/servo_control -- -j4 -l4
+[34.968s] Invoking command in '/root/lidar_system/build/servo_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/lidar_system/build/servo_control
+[35.002s] -- Install configuration: ""
+[35.003s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/dynamic_tf_broadcaster
+[35.004s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/lidar_pointcloud_node
+[35.006s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/scan_sequence_node
+[35.007s] -- Installing: /root/lidar_system/install/servo_control/lib/servo_control/target_tracker_node
+[35.022s] -- Set runtime path of "/root/lidar_system/install/servo_control/lib/servo_control/target_tracker_node" to ""
+[35.023s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/mavros_tf_node
+[35.024s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/pythonpath.sh
+[35.025s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/pythonpath.dsv
+[35.025s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control
+[35.025s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control/__init__.py
+[35.139s] Listing '/root/lidar_system/install/servo_control/lib/python3.8/site-packages/servo_control'...
+[35.158s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/servo_motor_node.py
+[35.159s] -- Up-to-date: /root/lidar_system/install/servo_control/lib/servo_control/lidar_bbox_open3d.py
+[35.160s] -- Up-to-date: /root/lidar_system/install/servo_control/share/ament_index/resource_index/package_run_dependencies/servo_control
+[35.161s] -- Up-to-date: /root/lidar_system/install/servo_control/share/ament_index/resource_index/parent_prefix_path/servo_control
+[35.162s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/ament_prefix_path.sh
+[35.162s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/ament_prefix_path.dsv
+[35.163s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/path.sh
+[35.163s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/environment/path.dsv
+[35.163s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.bash
+[35.164s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.sh
+[35.164s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.zsh
+[35.164s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/local_setup.dsv
+[35.165s] -- Installing: /root/lidar_system/install/servo_control/share/servo_control/package.dsv
+[35.165s] -- Up-to-date: /root/lidar_system/install/servo_control/share/ament_index/resource_index/packages/servo_control
+[35.165s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_controlConfig.cmake
+[35.166s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/cmake/servo_controlConfig-version.cmake
+[35.166s] -- Up-to-date: /root/lidar_system/install/servo_control/share/servo_control/package.xml
+[35.180s] Invoked command in '/root/lidar_system/build/servo_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/lidar_system/build/servo_control
