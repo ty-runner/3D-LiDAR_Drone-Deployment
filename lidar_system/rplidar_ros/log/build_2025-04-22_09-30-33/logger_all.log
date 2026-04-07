@@ -1,0 +1,105 @@
+[0.337s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.338s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff815672b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff81760700>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff81760700>>)
+[0.737s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.737s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.737s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.738s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.738s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.738s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.738s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ty/rplidar_sdk/src/rplidar_ros'
+[0.738s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.738s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.738s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.769s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'rplidar_ros'
+[0.769s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.769s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.770s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.770s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.770s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.817s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.817s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.823s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 280 installed packages in /opt/ros/humble
+[0.828s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.931s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_args' from command line to 'None'
+[0.932s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target' from command line to 'None'
+[0.932s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.932s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.932s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.932s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.932s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.932s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.932s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.932s] DEBUG:colcon.colcon_core.verb:Building package 'rplidar_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ty/rplidar_sdk/src/rplidar_ros/build/rplidar_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros', 'merge_install': False, 'path': '/home/ty/rplidar_sdk/src/rplidar_ros', 'symlink_install': False, 'test_result_base': None}
+[0.932s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.935s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.935s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ty/rplidar_sdk/src/rplidar_ros' with build type 'ament_cmake'
+[0.935s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ty/rplidar_sdk/src/rplidar_ros'
+[0.943s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.943s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.943s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.957s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ty/rplidar_sdk/src/rplidar_ros/build/rplidar_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ty/rplidar_sdk/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros
+[3.583s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ty/rplidar_sdk/src/rplidar_ros/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ty/rplidar_sdk/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros
+[3.589s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ty/rplidar_sdk/src/rplidar_ros/build/rplidar_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ty/rplidar_sdk/src/rplidar_ros/build/rplidar_ros -- -j6 -l6
+[24.175s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ty/rplidar_sdk/src/rplidar_ros/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ty/rplidar_sdk/src/rplidar_ros/build/rplidar_ros -- -j6 -l6
+[24.199s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ty/rplidar_sdk/src/rplidar_ros/build/rplidar_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ty/rplidar_sdk/src/rplidar_ros/build/rplidar_ros
+[24.253s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[24.254s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ty/rplidar_sdk/src/rplidar_ros/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ty/rplidar_sdk/src/rplidar_ros/build/rplidar_ros
+[24.264s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros' for CMake module files
+[24.265s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros' for CMake config files
+[24.266s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[24.266s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[24.268s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[24.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[24.271s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/lib'
+[24.272s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/bin'
+[24.272s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[24.273s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/lib/python3.10/site-packages'
+[24.273s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/bin'
+[24.274s] INFO:colcon.colcon_core.shell:Creating package script '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[24.277s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[24.279s] INFO:colcon.colcon_core.shell:Creating package script '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/package.sh'
+[24.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/package.bash'
+[24.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[24.284s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[24.286s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[24.287s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros' for CMake module files
+[24.289s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros' for CMake config files
+[24.290s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[24.290s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[24.291s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[24.292s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[24.294s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/lib'
+[24.294s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/bin'
+[24.294s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[24.295s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/lib/python3.10/site-packages'
+[24.296s] Level 1:colcon.colcon_core.environment:checking '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/bin'
+[24.296s] INFO:colcon.colcon_core.shell:Creating package script '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[24.298s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[24.299s] INFO:colcon.colcon_core.shell:Creating package script '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/package.sh'
+[24.301s] INFO:colcon.colcon_core.shell:Creating package script '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/package.bash'
+[24.302s] INFO:colcon.colcon_core.shell:Creating package script '/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[24.303s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ty/rplidar_sdk/src/rplidar_ros/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[24.304s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[24.306s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[24.307s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[24.307s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[24.360s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[24.360s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[24.360s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[24.434s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[24.436s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ty/rplidar_sdk/src/rplidar_ros/install/local_setup.ps1'
+[24.438s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ty/rplidar_sdk/src/rplidar_ros/install/_local_setup_util_ps1.py'
+[24.442s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ty/rplidar_sdk/src/rplidar_ros/install/setup.ps1'
+[24.445s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ty/rplidar_sdk/src/rplidar_ros/install/local_setup.sh'
+[24.448s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ty/rplidar_sdk/src/rplidar_ros/install/_local_setup_util_sh.py'
+[24.450s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ty/rplidar_sdk/src/rplidar_ros/install/setup.sh'
+[24.454s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ty/rplidar_sdk/src/rplidar_ros/install/local_setup.bash'
+[24.455s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ty/rplidar_sdk/src/rplidar_ros/install/setup.bash'
+[24.458s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ty/rplidar_sdk/src/rplidar_ros/install/local_setup.zsh'
+[24.460s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ty/rplidar_sdk/src/rplidar_ros/install/setup.zsh'
